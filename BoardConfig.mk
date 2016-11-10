@@ -87,9 +87,6 @@ TARGET_USE_COMPAT_GRALLOC_PERFORM := true
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 
-# Extended Filesystem Support
-TARGET_EXFAT_DRIVER := sdfat
-
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
