@@ -722,7 +722,7 @@ on early-boot
     setprop init.svc.console stopped
 
 # Services begin here
-service adsprpcd /vendor/bin/adsprpcd
+service vendor.adsprpcd /vendor/bin/adsprpcd
     class main
     user media
     group media
@@ -734,7 +734,7 @@ service media /system/bin/mediaserver
     group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm
     ioprio rt 4
 
-service qcamerasvr /vendor/bin/mm-qcamera-daemon
+service vendor.qcamerasvr /vendor/bin/mm-qcamera-daemon
     class main
     user camera
     group camera system inet input graphics bluetooth
@@ -744,13 +744,13 @@ service vendor.qseecomd /vendor/bin/qseecomd
     user root
     group root
 
-service mpdecision /vendor/bin/mpdecision --avg_comp
+service vendor.mpdecision /vendor/bin/mpdecision --avg_comp
     class main
     user root
     group root readproc
     disabled
 
-service thermal-engine /vendor/bin/thermal-engine
+service vendor.thermal-engine /vendor/bin/thermal-engine
     class main
     user root
     socket thermal-send-client stream 0666 system system
@@ -758,38 +758,38 @@ service thermal-engine /vendor/bin/thermal-engine
     socket thermal-recv-passive-client stream 0666 system system
    group system root
 
-service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
+service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class main
     user root
     oneshot
 
-service rfs_access /vendor/bin/rfs_access
+service vendor.rfs_access /vendor/bin/rfs_access
     class core
     user system
     group system net_raw
 
-service rmt_storage /vendor/bin/rmt_storage
+service vendor.rmt_storage /vendor/bin/rmt_storage
     class core
     user root
     group system wakelock
 
-service netmgrd /vendor/bin/netmgrd
+service vendor.netmgrd /vendor/bin/netmgrd
     class main
     user root
     group radio readproc system wakelock oem_2950
 
 # QMUX must be in multiple groups to support external process connections
-service qmuxd /vendor/bin/qmuxd
+service vendor.qmuxd /vendor/bin/qmuxd
     class main
     user radio
     group radio audio bluetooth gps oem_2950 log
 
-service loc_launcher /vendor/bin/loc_launcher
+service vendor.loc_launcher /vendor/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
     class late_start
     group gps inet net_raw diag oem_2950 net_admin wifi
 
-service macloader /vendor/bin/macloader
+service vendor.macloader /vendor/bin/macloader
     class late_start
     oneshot
     user system
