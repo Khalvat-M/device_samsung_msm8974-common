@@ -142,7 +142,6 @@ BOARD_ROOT_EXTRA_SYMLINKS := /data/tombstones:/tombstones
 
 # Power HAL
 TARGET_USES_INTERACTION_BOOST := true
-TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(COMMON_PATH)/power/power_ext.c
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
