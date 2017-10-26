@@ -1,14 +1,31 @@
+# This really is necessary for init.qcom.rc to manually restorecon the
+# /data/data/com.android.providers.telephony/(databases|shared_prefs)
+# symlinks. Without the manual restorecon, we would have to allow rild
+# to read any system_data_file:lnk_file.
+selinux_check_context(vendor_init)
+
+allow vendor_init {
+    packages_list_file
+    seapp_contexts_file
+}:file r_file_perms;
+
+allow vendor_init {
+  radio_data_file
+  system_data_file
+}:lnk_file create_file_perms;
+
+allow vendor_init radio_data_file:lnk_file relabelto;
+allow vendor_init system_data_file:lnk_file relabelfrom;
+
+allow vendor_init wifi_data_file:file create_file_perms;
+
+
 allow vendor_init firmware_file:dir { create setattr };
 allow vendor_init firmware_file:lnk_file read;
-allow vendor_init packages_list_file:file { getattr open read };
-allow vendor_init radio_data_file:lnk_file unlink;
-allow vendor_init seapp_contexts_file:file { getattr open read };
 allow vendor_init selinuxfs:file { getattr open read write };
 allow vendor_init sysfs:file relabelfrom;
 allow vendor_init sysfs:dir relabelfrom;
 allow vendor_init system_data_file:file { create open setattr write };
-allow vendor_init system_data_file:lnk_file { create getattr unlink };
-allow vendor_init wifi_data_file:file { create getattr open setattr write };
 allow vendor_init unlabeled:dir { search setattr };
 allow vendor_init unlabeled:file { setattr };
 allow vendor_init unlabeled:{ dir file } { getattr relabelfrom };
