@@ -181,9 +181,6 @@ endif
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
 
-# Use Snapdragon LLVM if available on build server
-TARGET_USE_SDCLANG := true
-
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI := true
 BOARD_WLAN_DEVICE := bcmdhd
