@@ -173,9 +173,6 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 # Sensors
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
-# Time services
-BOARD_USES_QC_TIME_SERVICES := true
-
 # TWRP Support - Optional
 ifeq ($(WITH_TWRP),true)
 -include $(COMMON_PATH)/twrp.mk
