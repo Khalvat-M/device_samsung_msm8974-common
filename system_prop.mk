@@ -132,7 +132,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.latch_unsignaled=1 \
     debug.sf.recomputecrop=0 \
     persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0
+    persist.sys.wfd.virtual=0 \
+    vendor.display.disable_rotator_downscale=1 \
+    vendor.display.disable_scaler=0
 
 # fastbootd
 PRODUCT_PROPERTY_OVERRIDES += \
