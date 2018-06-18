@@ -232,9 +232,6 @@
     in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
       
-    <!-- Enable Doze and App Standby -->
-    <bool name="config_enableAutoPowerModes">true</bool>
-
     <!-- AlwaysOnDisplay  -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
      
