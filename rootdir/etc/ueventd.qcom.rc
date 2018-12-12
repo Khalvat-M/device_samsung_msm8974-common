@@ -36,7 +36,7 @@ subsystem msm_camera
     dirname /dev/msm_camera
 
 # the DIAG device node is not world writable/readable.
-/dev/diag                 0660   system     oem_2950
+/dev/diag                 0666   system     oem_2950
 
 /dev/alarm                0664   system     radio
 /dev/genlock              0666   system     system
