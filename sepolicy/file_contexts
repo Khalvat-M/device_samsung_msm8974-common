@@ -19,6 +19,7 @@
 # block devices
 /dev/block/platform/msm_sdcc\.1/by-name/efs             u:object_r:efs_block_device:s0
 /dev/block/platform/msm_sdcc\.1/by-name/fota            u:object_r:misc_block_device:s0
+/dev/block/platform/msm_sdcc.1/by-name/pad              u:object_r:misc_block_device:s0
 
 # data files
 /data/.cid.info                                         u:object_r:wifi_data_file:s0
