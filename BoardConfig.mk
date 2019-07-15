@@ -67,9 +67,6 @@ TARGET_CPU_VARIANT_RUNTIME := krait
 # Camera
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 
-# Charger
-BOARD_CHARGER_ENABLE_SUSPEND := true
-
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
