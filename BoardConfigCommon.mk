@@ -13,8 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from common msm8974
--include device/samsung/msm8974-common/BoardConfigCommon.mk
+# inherit from qcom-common
+-include device/samsung/qcom-common/BoardConfigCommon.mk
+
+# Platform
+TARGET_BOARD_PLATFORM := msm8974
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
+
 
 COMMON_PATH := device/samsung/klte-common
 
@@ -23,9 +28,20 @@ TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 BUILD_FINGERPRINT := samsung/kltexx/klte:6.0.1/MMB29M/G900FXXU1CRH1:user/release-keys
 
 # Audio
+AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := true
+AUDIO_FEATURE_ENABLED_EXTN_FORMATS := true
+AUDIO_FEATURE_ENABLED_EXTN_POST_PROC := true
+AUDIO_FEATURE_ENABLED_FLUENCE := true
+AUDIO_FEATURE_ENABLED_HFP := true
+AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
+BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
+# Binder API version
+TARGET_USES_64_BIT_BINDER := true
+
 # Bluetooth
+BOARD_HAVE_BLUETOOTH := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 BOARD_CUSTOM_BT_CONFIG := $(COMMON_PATH)/bluetooth/vnd_klte.txt
 BOARD_HAVE_BLUETOOTH_BCM := true
@@ -34,15 +50,68 @@ BOARD_HAVE_SAMSUNG_BLUETOOTH := true
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 
+# Architecture
+TARGET_CPU_VARIANT := krait
+TARGET_CPU_SMP := true
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
+
+# Boot animation
+#TARGET_BOOTANIMATION_HALF_RES := true
+#TARGET_BOOTANIMATION_MULTITHREAD_DECODE := true
+#TARGET_BOOTANIMATION_PRELOAD := true
+#TARGET_BOOTANIMATION_TEXTURE_CACHE := true
+
+# Camera
+TARGET_HAS_LEGACY_CAMERA_HAL1 := true
+
+# Charger
+BOARD_BATTERY_DEVICE_NAME := "battery"
+BOARD_CHARGING_CMDLINE_NAME := "androidboot.bootchg"
+BOARD_CHARGING_CMDLINE_VALUE := "true"
+WITH_LINEAGE_CHARGER := false
+
+# Dexpreopt
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= false
+    WITH_DEXPREOPT := true
+  endif
+endif
+
+# Display
+OVERRIDE_RS_DRIVER:= libRSDriver_adreno.so
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x02000000U
+
+# Shader cache config options
+# Maximum size of the  GLES Shaders that can be cached for reuse.
+# Increase the size if shaders of size greater than 12KB are used.
+MAX_EGL_CACHE_KEY_SIZE := 12*1024
+
+# Maximum GLES shader cache size for each app to store the compiled shader
+# binaries. Decrease the size if RAM or Flash Storage size is a limitation
+# of the device.
+MAX_EGL_CACHE_SIZE := 2048*1024
+
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+
 # HIDL
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
+
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_msm8974
+TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8974
+
+# Netd
+TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 zcache.enabled=1 zcache.compressor=lz4 maxcpus=1
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 zcache.enabled=1 zcache.compressor=lz4
 BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
@@ -62,22 +131,28 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/vendor/bin/hw/rild=27
 
 # Partitions
-BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
-BOARD_CACHEIMAGE_PARTITION_SIZE := 157286400
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 15728640
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2411724800
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 2411724800
+BOARD_BOOTIMAGE_PARTITION_SIZE := 20971520		# 20M
+BOARD_CACHEIMAGE_PARTITION_SIZE := 314572800		# 300M
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 20971520		# 20M
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2411724800		# Dont change it
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 12507380736	# Dont change it
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Power HAL
+TARGET_HAS_LEGACY_POWER_STATS := true
+TARGET_HAS_NO_WLAN_STATS := true
+TARGET_USES_INTERACTION_BOOST := true
 TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(COMMON_PATH)/power/power_ext.c
 TARGET_POWERHAL_VARIANT := qcom
 
-# Properties
-TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
+# Exclude serif fonts for saving system.img size.
+#EXCLUDE_SERIF_FONTS := true
+
+# Use mke2fs to create ext4 images
+TARGET_USES_MKE2FS := true
 
 # Radio
 BOARD_PROVIDES_LIBRIL := true
@@ -92,12 +167,20 @@ BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_DEVICE_DIRS += device/samsung/klte-common
 
 # SELinux
-include $(COMMON_PATH)/sepolicy/sepolicy.mk
+include device/qcom/sepolicy-legacy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 
 # Sensors
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
+
+# System Server
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
+# Time services
+BOARD_USES_QC_TIME_SERVICES := true
 
 # TWRP Support - Optional
 ifeq ($(WITH_TWRP),true)
@@ -124,3 +207,6 @@ WIFI_DRIVER_FW_PATH_AP      := "/vendor/etc/wifi/bcmdhd_apsta.bin"
 
 # inherit from the proprietary version
 -include vendor/samsung/klte-common/BoardConfigVendor.mk
+
+# inherit from the proprietary version
+-include vendor/samsung/msm8974-common/BoardConfigVendor.mk

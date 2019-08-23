@@ -17,41 +17,41 @@
         <value>4.5</value>
         <value>4.5</value>
     </array>
-    <item name="cpu.clusters.cores">4</item>
-    <array name="cpu.core_speeds.cluster0">
-        <value>2457600</value>
-        <value>2265600</value>
-        <value>1958400</value>
-        <value>1728000</value>
-        <value>1574400</value>
-        <value>1497600</value>
-        <value>1267200</value>
-        <value>1190400</value>
-        <value>1036800</value>
-        <value>960000</value>
-        <value>883200</value>
-        <value>729600</value>
-        <value>652800</value>
-        <value>422400</value>
+    <array name="cpu.speeds">
         <value>300000</value>
+        <value>422400</value>
+        <value>652800</value>
+        <value>729600</value>
+        <value>883200</value>
+        <value>960000</value>
+        <value>1036800</value>
+        <value>1190400</value>
+        <value>1267200</value>
+        <value>1497600</value>
+        <value>1574400</value>
+        <value>1728000</value>
+        <value>1958400</value>
+        <value>2265600</value>
+        <value>2357600</value>
+        <value>2457600</value>
     </array>
-    <item name="cpu.suspend">3.1</item>
-    <array name="cpu.core_power.cluster0">
-        <value>348</value>
-        <value>313</value>
-        <value>265</value>
-        <value>232</value>
-        <value>213</value>
-        <value>203</value>
-        <value>176</value>
-        <value>132</value>
-        <value>122</value>
-        <value>114</value>
-        <value>97</value>
-        <value>92</value>
-        <value>84</value>
-        <value>74</value>
+    <item name="cpu.idle">5</item>
+    <item name="cpu.awake">20.5</item>
+    <array name="cpu.active">
         <value>56</value>
+        <value>78</value>
+        <value>97</value>
+        <value>114</value>
+        <value>148</value>
+        <value>193</value>
+        <value>194</value>
+        <value>195</value>
+        <value>250</value>
+        <value>275</value>
+        <value>289</value>
+        <value>315</value>
+        <value>353</value>
+        <value>373</value>
     </array>
     <item name="battery.capacity">2800</item>
     <array name="wifi.batchedscan">

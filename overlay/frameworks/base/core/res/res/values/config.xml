@@ -111,7 +111,7 @@
          The user is forbidden from setting the brightness below this level. -->
     <integer name="config_screenBrightnessSettingMinimum">2</integer>
 
-      <!-- Maximum screen brightness allowed by the power manager.
+    <!-- Maximum screen brightness allowed by the power manager.
          The user is forbidden from setting the brightness above this level. -->
     <integer name="config_screenBrightnessSettingMaximum">255</integer>
 
@@ -165,11 +165,25 @@
         <item>"bt-pan"</item>
     </string-array>
 
+    <!-- When true, the tethering upstream network follows the current default
+         Internet network (except when the current default network is mobile,
+         in which case a DUN network will be used if required). -->
+    <bool name="config_tether_upstream_automatic">true</bool>
+
+    <!-- Controls the WiFi wakeup feature.
+          0 = Not available.
+          1 = Available.
+    -->
+    <integer translatable="false" name="config_wifi_wakeup_available">1</integer>
+
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
     <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
 
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
-    <bool translatable="false" name="config_wifi_background_scan_support">false</bool>
+    <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
+
+    <!-- Wifi driver supports batched scan -->
+    <bool translatable="false" name="config_wifi_batched_scan_supported">true</bool>
 
     <!-- Enables or disables fading edges when marquee is enabled in TextView. -->
     <bool name="config_ui_enableFadingMarquee">false</bool>
@@ -180,6 +194,9 @@
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true-->
     <bool name="skip_restoring_network_selection">true</bool>
+
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">true</bool>
 
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
@@ -223,9 +240,6 @@
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>
 
-    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveNotificationLed">true</bool>
-
     <!-- Control the behavior when the user long presses the home button
             0 - Nothing
             1 - Menu key
@@ -238,13 +252,21 @@
     -->
     <integer name="config_longPressOnHomeBehavior">3</integer>
 
+    <!-- Override the default detection behavior for the framework method
+         android.view.ViewConfiguration#hasPermanentMenuKey().
+         Valid settings are:
+         0 - No change. Use the default autodetection behavior.
+         1 - The device DOES have a permanent menu key; ignore autodetection.
+         2 - The device DOES NOT have a permanent menu key; ignore autodetection. -->
+    <integer name="config_overrideHasPermanentMenuKey">2</integer>
+
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">524288,2097152,4194304,262144,524288,1048576</string>
 
     <string-array name="config_mobile_tcp_buffers">
         <item>lte:2097152,4194304,8388608,262144,524288,1048576</item>
-        <item>lte_ca:2097152,4194304,8388608,262144,524288,1048576</item>
+        <item>lte_ca:4096,6291456,12582912,4096,1048576,2097152</item>
         <item>umts:4094,87380,110208,4096,16384,110208</item>
         <item>hspa:4094,87380,1220608,4096,16384,1220608</item>
         <item>hsupa:4094,87380,1220608,4096,16384,1220608</item>
@@ -256,12 +278,28 @@
         <item>ehrpd:4094,87380,1048576,4096,16384,262144</item>
     </string-array>
 
-    <!-- Override the default detection behavior for the framework method
-         android.view.ViewConfiguration#hasPermanentMenuKey().
-         Valid settings are:
-         0 - No change. Use the default autodetection behavior.
-         1 - The device DOES have a permanent menu key; ignore autodetection.
-         2 - The device DOES NOT have a permanent menu key; ignore autodetection. -->
-    <integer name="config_overrideHasPermanentMenuKey">2</integer>
+    <!-- Values for GPS configuration -->
+    <string-array translatable="false" name="config_gpsParameters">
+        <item>XTRA_SERVER_1=https://xtrapath1.izatcloud.net/xtra3grc.bin</item>
+        <item>XTRA_SERVER_2=https://xtrapath2.izatcloud.net/xtra3grc.bin</item>
+        <item>XTRA_SERVER_3=https://xtrapath3.izatcloud.net/xtra3grc.bin</item>
+        <item>SUPL_ES=1</item>
+        <item>SUPL_HOST=supl.google.com</item>
+        <item>SUPL_PORT=7275</item>
+        <item>SUPL_MODE=1</item>
+        <item>LPP_PROFILE=0</item>
+    </string-array>
+
+    <!-- The RadioAccessFamilies supported by the device.
+         Empty is viewed as "all".  Only used on devices which
+         don't support RIL_REQUEST_GET_RADIO_CAPABILITY
+         format is UMTS|LTE|... -->
+    <string translatable="false" name="config_radio_access_family">GSM|WCDMA|LTE</string>
+
+    <!-- Whether or not swipe up gesture is enabled by default -->
+    <bool name="config_swipe_up_gesture_default">true</bool>
+
+    <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
+    <bool name="config_swipe_up_gesture_setting_available">true</bool>
 
 </resources>

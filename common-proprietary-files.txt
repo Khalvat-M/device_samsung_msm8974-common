@@ -1,10 +1,10 @@
-# Samsung Package Version: G900FXXU1CRH1_G900FOXA1CRH1_BTU, unless pinned
+# Samsung Package Version:  G9006VZNS1CRH1_G9006VCHU1CRH1
 
 # Activity recognition
 vendor/lib/libsensor1.so
 
 # Audio
-vendor/lib/libacdbloader.so|27ceba70917afc0e9b26877354c8404dae5af09c
+vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
@@ -28,7 +28,7 @@ vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
 vendor/lib/rfsa/adsp/libadsp_fd_skel.so
 
-# Bluetooth firmware - Pinned to G900VVRU2DQH2_G900VVZW2DQH2_VZW
+# Bluetooth firmware - Pinned to  G9006VZNS1CRH1_G9006VCHU1CRH1
 vendor/firmware/bcm4350_V0395.0797.hcd|ff51604a8fc4cd1179d1ac869f517a413baad27f
 vendor/firmware/bcm4350_V0395.0797_murata.hcd|ff51604a8fc4cd1179d1ac869f517a413baad27f
 vendor/firmware/bcm4350_V0395.0797_semco.hcd|ff51604a8fc4cd1179d1ac869f517a413baad27f
@@ -210,6 +210,7 @@ bin/mpdecision:vendor/bin/mpdecision
 vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
+vendor/lib/libqc-opt.so
 
 # DRM
 bin/qseecomd:vendor/bin/qseecomd
@@ -240,36 +241,38 @@ vendor/lib/libqti-perfd-client.so
 # Qualcomm
 vendor/lib/libxml.so
 
-# Qualcomm Framework - Pinned to G900FXXS1BPCL_G900FOXA1BOJ1_BTU
-lib/libmdmdetect.so:vendor/lib/libmdmdetect.so|9c19d5aacc094597c166529386f83ac721ac1979
-lib/libperipheral_client.so:vendor/lib/libperipheral_client.so|7107a8e656fabc5ff6b7a33740be80a1add6abbd
-vendor/lib/libconfigdb.so|a7eedfbb0ffa070c9239f0d293262e268342da1d
-vendor/lib/libdiag.so|2dd30d2de57567aa4575f98e4679cdbd625bbbe6
-vendor/lib/libdsi_netctrl.so|d5d25fd5b1ea250bdfcb64059eafaf609fe2e32c
-vendor/lib/libdsutils.so|99fac25d6a10ea89a7f66cfc7c3a36478a178568
-vendor/lib/libidl.so|9b871bda84a1204b35b5a93311d666aa36a7f8b8
-vendor/lib/libnetmgr.so|fc8dcd60b4fd28518e03949842dd6b496712c2d1
-vendor/lib/libqcci_legacy.so|5f0f25a72677d0b3183031490e45b6de26735327
-vendor/lib/libqdi.so|6bd79ba4dc4b4af654cda666e829312ba07a22e9
-vendor/lib/libqmi.so|d120b126ba94cb2d4164243ef7a8516168b6fedf
-vendor/lib/libqmi_cci.so|b94c84c54183e538a7802ca531da7cf2b8176614
-vendor/lib/libqmi_client_qmux.so|79cb7b305bd9f87c581f26c805f4ca2bbdf3a069
-vendor/lib/libqmi_common_so.so|6c70d0c23898f4d5aa5a962736a06aa3d21e7aa6
-vendor/lib/libqmi_csi.so|dee249a1f0fff082b5e5547cfab103ac10ab55e2
-vendor/lib/libqmi_encdec.so|82e39ae7e4bb8651d06fdae99fc38e3fb390b62d
-vendor/lib/libqmiservices.so|0b90d67d7ec0b0bc3de2b5ccc3afcda13bd5ffd8
+# Qualcomm Framework - Pinned to  G9006VZNS1CRH1_G9006VCHU1CRH1
+lib/libmdmdetect.so:vendor/lib/libmdmdetect.so
+lib/libperipheral_client.so:vendor/lib/libperipheral_client.so
+vendor/lib/libconfigdb.so
+vendor/lib/libdiag.so
+vendor/lib/libdsutils.so
+vendor/lib/libidl.so
+vendor/lib/libnetmgr.so
+vendor/lib/libqcci_legacy.so
+vendor/lib/libqmi.so
+vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_client_qmux.so
+vendor/lib/libqmi_common_so.so
+vendor/lib/libqmi_csi.so
+vendor/lib/libqmi_encdec.so
+vendor/lib/libqmiservices.so
+vendor/lib/libqmi_client_helper.so
 
-# Radio - Pinned to G900FXXS1BPCL_G900FOXA1BOJ1_BTU
-bin/efsks:vendor/bin/efsks|2c366ac7ab878068c77e5598c411a48cf47b056a
-bin/ks:vendor/bin/ks|949406ae5d1b74034b3828af1905a181e4b69961
-bin/qcks:vendor/bin/qcks|9026c84f32e1ee5121024c72b878c09dfde95e5b
-bin/qmuxd:vendor/bin/qmuxd|e257d63996812e2eb23810bda59913f558ee03d2
-bin/rfs_access:vendor/bin/rfs_access|49a8516ed01b609a9e5079d8135b75db5b024236
-bin/rmt_storage:vendor/bin/rmt_storage|000ddcabfc9416e9a27ba6d04860cc14b6803cdd
-vendor/lib/libril-qcril-hook-oem.so|6a73ed46f4fbcb283eea5fb44b24a7d14522bfe5
+# Radio - Pinned to  G9006VZNS1CRH1_G9006VCHU1CRH1
+bin/efsks:vendor/bin/efsks
+bin/ks:vendor/bin/ks
+bin/qcks:vendor/bin/qcks
+bin/qmuxd:vendor/bin/qmuxd
+bin/rfs_access:vendor/bin/rfs_access
+bin/rmt_storage:vendor/bin/rmt_storage
+bin/netmgrd:vendor/bin/netmgrd
+vendor/lib/libril-qcril-hook-oem.so
+vendor/lib/libcneapiclient.so
+lib/libprotobuf-cpp-full.so:vendor/lib/libprotobuf-cpp-full.so
 
 # Sensors
-lib/hw/sensors.msm8974.so:vendor/lib/hw/sensors.vendor.msm8974.so|48c6112bc4097e9176fcd53bf3f7ba0d643b27aa
+lib/hw/sensors.msm8974.so:vendor/lib/hw/sensors.vendor.msm8974.so
 lib/libhr.so:vendor/lib/libhr.so
 
 # Time services
@@ -291,3 +294,48 @@ etc/wifi/nvram_net.txt:vendor/etc/wifi/nvram_net.txt
 etc/wifi/nvram_net.txt_a0:vendor/etc/wifi/nvram_net.txt_a0
 etc/wifi/nvram_net.txt_muratafem1:vendor/etc/wifi/nvram_net.txt_murata
 etc/wifi/nvram_net.txt_semco3rd:vendor/etc/wifi/nvram_net.txt_semco3rd
+
+# MSM8974-COMMON START FROM HERE
+# aptX (Moto griffin - NCLS25.86-11-4-6-5)
+vendor/lib/libaptX_encoder.so|b03772672144d4b750a5672c2922aded93bb0512
+
+# Graphics (OnePlus onyx - Oxygen OS 3.1.4 - OnePlusXOxygen_14_201611071506)
+vendor/lib/egl/eglsubAndroid.so|b8a5790c5b4ba4cf0018c94066104610c821ed8e
+vendor/lib/egl/libEGL_adreno.so|cd29673e990dba8158e961e287a79dfbd852d095
+vendor/lib/egl/libGLESv1_CM_adreno.so|ae86d16ba499ac6cdd3cecb91ae6b16b4c303984
+vendor/lib/egl/libGLESv2_adreno.so|445be60045ff86d1d27545692134eacf0d89a6dc
+vendor/lib/egl/libq3dtools_adreno.so|2c12919492f1146b58f4f1c379dfe10d3320d476
+vendor/lib/libC2D2.so|d34587d5143bd09f847cb6686b03461a6e62cd87
+vendor/lib/libCB.so|3d2ad5bbff1cf4019d89c38689ec2ce3c186a3c1
+vendor/lib/libOpenCL.so|2b4b9692b16729b880d7881e68208183943f9612
+vendor/lib/libadreno_utils.so|a109e06c933811c578d129c0772a612cf5d94367
+vendor/lib/libbccQTI.so|94132d5d8421428001c2201a8915949c531b0ad9
+vendor/lib/libc2d30-a3xx.so|3666e0bf418e7ea7480b27c2c1ddd1bc86037044
+vendor/lib/libgsl.so|fafee1adf0e89325b3a1ea83d5205c02ebf860f3
+vendor/lib/libllvm-qcom.so|fc96c949b662fb34b287a4c0aa194984fbb57d7d
+vendor/lib/libsc-a3xx.so|231201bcfead5f930537d2fba22d89b00e673386
+vendor/lib/libscale.so|b44f44c633fa404d10e76aaa23593b516e08e2b8
+
+# Graphics firmware (same everywhere, so lets say Samsung G900FXXS1CQI4_G900FPHN1CQI2_PHN)
+vendor/firmware/a330_pfp.fw|3e2fcee7276ded819cf2d95864fdd6788a484ee1
+vendor/firmware/a330_pm4.fw|ae739ea812f9e4462d7bba8b9ead5782d4496618
+
+# GPS (OnePlus bacon - lineage-14.1-20170807-nightly-bacon-signed.zip)
+vendor/lib/libloc_api_v02.so|9a8401afc86b54e73aa29995f228fd0243cee793
+vendor/lib/libloc_ds_api.so|ccce9d3c3fa4cadafd13b63c90d3ab8c115dd7b0
+vendor/lib/hw/flp.default.so|c36ec0a3e6563fa8ddb96aaa7d0129249ce1d305
+vendor/lib/libflp.so|20994b3ac3ecd2094698ac98463aed97e3ce54ef
+vendor/lib/libgeofence.so|953c2720c98825cdfb2757839f5f86400c11a2d5
+vendor/lib/libizat_core.so|8d1b8f5c26cc9bcdacb402e253048211a6c07ba1
+vendor/lib/liblbs_core.so|3dea19e84a0d226ea3e5c92ec169f7e0fdbe5699
+
+# Renderscript (Google bullhead - OPR4.170623.006)
+vendor/lib/libRSDriver_adreno.so|2044baf0169177e52aba6d7138f80559ecf2b58d
+vendor/lib/librs_adreno.so|cceaf847d749ac2f1a3af3a1ae6ba653d93e0ed9
+vendor/lib/librs_adreno_sha1.so|e797997d3ac69dfa87904863672c5b9769c796cc
+
+# STLport (Camera/RIL) - local compile LineageOS/external/stlport@984b8432
+vendor/lib/libstlport.so|0be0a0d13e12fbf95d97d309dcbc25d3f969a469
+
+# Widevine (Google angler - OPR6.170623.017)
+vendor/lib/mediadrm/libwvdrmengine.so|66ba66d047044f92eb0eada1faf6a5799ded90ab
