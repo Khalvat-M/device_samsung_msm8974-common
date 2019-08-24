@@ -60,6 +60,11 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service \
     libbt-vendor
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bluetooth/btconf/auto_pair_devlist.conf:system/etc/bluetooth/auto_pair_devlist.conf \
+    $(LOCAL_PATH)/bluetooth/btconf/iop_device_list.conf:system/etc/bluetooth/iop_device_list.conf \
+    $(LOCAL_PATH)/bluetooth/btconf/iop_bt.db:system/etc/bluetooth/iop_bt.db
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
