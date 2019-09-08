@@ -310,7 +310,6 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
     libnetcmdiface \
-    libwpa_client \
     macloader \
     wificond \
     wpa_supplicant \
