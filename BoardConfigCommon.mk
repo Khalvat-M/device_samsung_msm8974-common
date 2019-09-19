@@ -176,9 +176,6 @@ BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 # Sensors
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
-# System Server
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
-
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 
