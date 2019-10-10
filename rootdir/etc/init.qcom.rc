@@ -861,12 +861,11 @@ service rmt_storage /vendor/bin/rmt_storage
 service qmuxd /vendor/bin/qmuxd
     class main
     user radio
-    group radio audio bluetooth gps qcom_diag
+    group radio audio bluetooth gps oem_2950 log
 
 service loc_launcher /vendor/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
     class late_start
-    group gps qcom_oncrpc inet net_raw qcom_diag net_admin wifi
 
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -O/data/vendor/wifi/wpa/sockets -puse_p2p_group_interface=1 \
