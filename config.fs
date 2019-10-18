@@ -24,3 +24,15 @@ mode: 0771
 user: AID_SYSTEM
 group: AID_RADIO
 caps: 0
+
+[vendor/bin/loc_launcher]
+mode: 0755
+user:  AID_GPS
+group: AID_GPS
+caps: SETUID SETGID
+
+[system/vendor/bin/loc_launcher]
+mode: 0755
+user:  AID_GPS
+group: AID_GPS
+caps: SETUID SETGID
