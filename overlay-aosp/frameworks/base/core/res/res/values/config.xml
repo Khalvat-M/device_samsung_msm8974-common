@@ -86,9 +86,6 @@
     <bool name="config_carrier_volte_available">true</bool>
     <bool name="config_carrier_vt_available">true</bool>
 
-    <!-- Whether the device has outdated qti-telephony-common.jar -->
-    <bool name="config_oldQtiTelephony">true</bool>
-
     <!-- Max number of scan filters supported by blutooth controller. 0 if the
          device does not support hardware scan filters-->
     <integer translatable="false" name="config_bluetooth_max_scan_filters">1</integer>
