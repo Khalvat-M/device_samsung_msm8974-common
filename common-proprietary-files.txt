@@ -325,23 +325,10 @@ vendor/lib/libscale.so|b44f44c633fa404d10e76aaa23593b516e08e2b8
 vendor/firmware/a330_pfp.fw|3e2fcee7276ded819cf2d95864fdd6788a484ee1
 vendor/firmware/a330_pm4.fw|ae739ea812f9e4462d7bba8b9ead5782d4496618
 
-# GPS (Updated from G9006VZNS1CRH1_G9006VCHU1CRH1)
+# GPS (Updated from onyx)
 bin/loc_launcher:vendor/bin/loc_launcher
-vendor/lib/hw/gps.default.so
-vendor/lib/libgps.utils.so
-vendor/lib/libloc_api_v02.so
-vendor/lib/libloc_core.so
-vendor/lib/libloc_eng.so
-vendor/lib/libalarmservice_jni.so
-vendor/lib/libdataitems.so
-vendor/lib/liblocationservice.so
-vendor/lib/liblowi_client.so
-vendor/lib/libulp2.so
-vendor/lib/slocation/libsgeo.so
-vendor/lib/liblocSDK5c.so
-vendor/lib/liblocSDK_2_5OEM.so
-vendor/lib/libnetworklocation.so
-vendor/lib/libloc_ds_api.so
+lib/libloc_api_v02.so:vendor/lib/libloc_api_v02.so
+lib/libloc_ds_api.so:vendor/lib/libloc_ds_api.so
 vendor/lib/hw/flp.default.so
 vendor/lib/libflp.so
 vendor/lib/libgeofence.so
