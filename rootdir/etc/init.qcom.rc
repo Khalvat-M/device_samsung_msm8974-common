@@ -887,6 +887,7 @@ service qmuxd /vendor/bin/qmuxd
 service loc_launcher /vendor/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
     class late_start
+    group gps inet net_raw diag oem_2950 net_admin wifi
 
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -O/data/vendor/wifi/wpa/sockets -puse_p2p_group_interface=1 \
