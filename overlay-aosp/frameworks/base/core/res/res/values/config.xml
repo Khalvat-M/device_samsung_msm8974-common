@@ -67,10 +67,7 @@
          The duplication is necessary, because this information is used before the features are
          available to the system.-->
     <bool name="config_freeformWindowManagement">true</bool>
-
-    <!-- Whether device ignores the RSSNR signal implementation -->
-    <bool name="config_ignoreRssnrSignalLevel">true</bool>
-      
+   
     <!-- Enable home button wake  -->
     <bool name="config_HomeWakeButton">true</bool>
     <integer name="config_deviceHardwareWakeKeys">65</integer>
