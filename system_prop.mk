@@ -41,7 +41,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.secwvk=144 \
     ro.sf.lcd_density=480 \
     debug.hwui.use_buffer_age=false \
-    debug.hwui.renderer=opengl
+    debug.hwui.renderer=opengl \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
