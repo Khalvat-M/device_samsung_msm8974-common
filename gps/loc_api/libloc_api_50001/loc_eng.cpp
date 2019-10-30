@@ -90,8 +90,6 @@ using namespace loc_core;
 
 boolean configAlreadyRead = false;
 unsigned int agpsStatus = 0;
-loc_gps_cfg_s_type gps_conf;
-loc_sap_cfg_s_type sap_conf;
 
 /* Parameter spec table */
 static const loc_param_s_type gps_conf_table[] =
@@ -500,7 +498,7 @@ struct LocEngSuplMode : public LocMsg {
         locallog();
     }
     inline virtual void proc() const {
-        mUlp->setCapabilities(getCarrierCapabilities());
+        mUlp->setCapabilities(ContextBase::getCarrierCapabilities());
     }
     inline  void locallog() const {
     }
@@ -891,9 +889,9 @@ inline void LocEngReportStatus::log() const {
 //        case LOC_ENG_MSG_REPORT_NMEA:
 LocEngReportNmea::LocEngReportNmea(void* locEng,
                                    const char* data, int len) :
-    LocMsg(), mLocEng(locEng), mNmea(new char[len]), mLen(len)
+    LocMsg(), mLocEng(locEng), mNmea(new char[len+1]), mLen(len)
 {
-    memcpy((void*)mNmea, (void*)data, len);
+    strlcpy(mNmea, data, len+1);
     locallog();
 }
 void LocEngReportNmea::proc() const {
@@ -1684,24 +1682,6 @@ inline void LocEngReportGpsMeasurement::log() const {
   }
 #define INIT_CHECK(ctx, ret) STATE_CHECK(ctx, "instance not initialized", ret)
 
-uint32_t getCarrierCapabilities() {
-    #define carrierMSA (uint32_t)0x2
-    #define carrierMSB (uint32_t)0x1
-    #define gpsConfMSA (uint32_t)0x4
-    #define gpsConfMSB (uint32_t)0x2
-    uint32_t capabilities = gps_conf.CAPABILITIES;
-    if ((gps_conf.SUPL_MODE & carrierMSA) != carrierMSA) {
-        capabilities &= ~gpsConfMSA;
-    }
-    if ((gps_conf.SUPL_MODE & carrierMSB) != carrierMSB) {
-        capabilities &= ~gpsConfMSB;
-    }
-
-    LOC_LOGV("getCarrierCapabilities: CAPABILITIES %x, SUPL_MODE %x, carrier capabilities %x",
-             gps_conf.CAPABILITIES, gps_conf.SUPL_MODE, capabilities);
-    return capabilities;
-}
-
 /*===========================================================================
 FUNCTION    loc_eng_init
 
@@ -1975,7 +1955,6 @@ static int loc_eng_stop_handler(loc_eng_data_s_type &loc_eng_data)
    int ret_val = LOC_API_ADAPTER_ERR_SUCCESS;
 
    if (loc_eng_data.adapter->isInSession()) {
-
        ret_val = loc_eng_data.adapter->stopFix();
        loc_eng_data.adapter->setInSession(FALSE);
    }
@@ -2736,7 +2715,6 @@ void loc_eng_configuration_update (loc_eng_data_s_type &loc_eng_data,
         gps_conf_tmp.SUPL_VER = gps_conf.SUPL_VER;
         gps_conf_tmp.LPP_PROFILE = gps_conf.LPP_PROFILE;
         gps_conf_tmp.A_GLONASS_POS_PROTOCOL_SELECT = gps_conf.A_GLONASS_POS_PROTOCOL_SELECT;
-        gps_conf_tmp.SUPL_MODE = gps_conf.SUPL_MODE;
         gps_conf_tmp.GPS_LOCK = gps_conf.GPS_LOCK;
         gps_conf = gps_conf_tmp;
     }
@@ -2858,8 +2836,9 @@ void loc_eng_handle_engine_up(loc_eng_data_s_type &loc_eng_data)
     if (loc_eng_data.adapter->isInSession()) {
         // This sets the copy in adapter to modem
         loc_eng_data.adapter->setInSession(false);
-        loc_eng_data.adapter->sendMsg(new LocEngStartFix(loc_eng_data.adapter));
+        loc_eng_start_handler(loc_eng_data);
     }
+
     EXIT_LOG(%s, VOID_RET);
 }
 
