@@ -1,0 +1,7 @@
+# root mount
+/firmware               u:object_r:firmware_file:s0
+/firmware-modem         u:object_r:firmware_file:s0
+
+# Rootfs mount
+/tombstones             u:object_r:rootfs:s0
+
