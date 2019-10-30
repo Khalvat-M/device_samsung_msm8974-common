@@ -330,6 +330,25 @@ on early-boot
     # overhead in the kernel. Turn it off.
     write /sys/block/mmcblk0/queue/add_random 0
 
+    # Create NETMGR daemon socket area
+    mkdir /dev/socket/netmgr 2770 radio radio
+
+    # create netmgr log dir
+    mkdir /data/misc/netmgr 0770 radio radio
+
+    # Create QMUX deamon socket area
+    mkdir /dev/socket/qmux_radio 2770 radio radio
+    mkdir /dev/socket/qmux_audio 2770 media audio
+    mkdir /dev/socket/qmux_bluetooth 2770 bluetooth bluetooth
+    mkdir /dev/socket/qmux_gps 2770 gps gps
+
+    # Allow QMUX daemon to assign port open wait time
+    chown radio radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
+
+    # Prevents permission denied error for telephony
+    chmod 0644 /proc/cmdline
+    chown root radio /proc/cmdline
+
     # MUIC
     chown radio system /sys/class/sec/switch/usb_sel
     chown radio system /sys/class/sec/switch/usb_state
@@ -856,6 +875,11 @@ service rmt_storage /vendor/bin/rmt_storage
     class core
     user root
     group system wakelock
+
+service netmgrd /vendor/bin/netmgrd
+    class main
+    user root
+    group radio readproc system wakelock oem_2950
 
 # QMUX must be in multiple groups to support external process connections
 service qmuxd /vendor/bin/qmuxd

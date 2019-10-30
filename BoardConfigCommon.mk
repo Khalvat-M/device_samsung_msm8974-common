@@ -162,9 +162,6 @@ TARGET_POWERHAL_VARIANT := qcom
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
 
-# Radio
-BOARD_PROVIDES_LIBRIL := true
-
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../$(COMMON_PATH)/recovery/recovery_keys.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
