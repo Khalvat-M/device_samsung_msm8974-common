@@ -243,38 +243,56 @@ vendor/lib/libSHIMDivxDrm.so
 # Perf
 vendor/lib/libqti-perfd-client.so
 
-# Qualcomm
+# Qualcomm BACON
 vendor/lib/libxml.so
 
-# Qualcomm Framework - Pinned to  G9006VZNS1CRH1_G9006VCHU1CRH1
+# Qualcomm Framework G9006VZNS1CRH1_G9006VCHU1CRH1
 lib/libmdmdetect.so:vendor/lib/libmdmdetect.so
 lib/libperipheral_client.so:vendor/lib/libperipheral_client.so
+
+# Radio
+bin/efsks:vendor/bin/efsks G9006VZNS1CRH1_G9006VCHU1CRH1
+bin/ks:vendor/bin/ks
+bin/qcks:vendor/bin/qcks
+bin/rfs_access:vendor/bin/rfs_access
+bin/rmt_storage:vendor/bin/rmt_storage
+
+# Radio BACON
+-app/shutdownlistener/shutdownlistener.apk:vendor/app/shutdownlistener/shutdownlistener.apk
+bin/netmgrd:vendor/bin/netmgrd|6d953fa4d4614ff6a56db9b7078be343da093e44
+bin/qmuxd:vendor/bin/qmuxd
+etc/data/dsi_config.xml:vendor/etc/data/dsi_config.xml
+etc/data/netmgr_config.xml:vendor/etc/data/netmgr_config.xml
+etc/permissions/qcnvitems.xml:vendor/etc/permissions/qcnvitems.xml|dd47edbccc24a5c254dca18250c0136ecab4f0d6
+etc/permissions/qcrilhook.xml:vendor/etc/permissions/qcrilhook.xml|5a65b197fbc65e3e89e829d07da11904eae3e938
+framework/qcnvitems.jar:vendor/framework/qcnvitems.jar
+framework/qcrilhook.jar:vendor/framework/qcrilhook.jar
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+vendor/lib/libcneapiclient.so
 vendor/lib/libconfigdb.so
+vendor/lib/liblqe.so
+vendor/lib/libnetmgr.so
+vendor/lib/libperipheral_client.so
+vendor/lib/libril-qc-qmi-1.so
+vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libdiag.so
+vendor/lib/libdsi_netctrl.so|6e832938764a46fa784e604782473c95088907ca
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
-vendor/lib/libnetmgr.so
 vendor/lib/libqcci_legacy.so
+vendor/lib/libqdi.so
+vendor/lib/libqdp.so
 vendor/lib/libqmi.so
 vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
-vendor/lib/libqmi_client_helper.so
+vendor/lib/libsmemlog.so
+vendor/lib/libsystem_health_mon.so
 
-# Radio - Pinned to  G9006VZNS1CRH1_G9006VCHU1CRH1
-bin/efsks:vendor/bin/efsks
-bin/ks:vendor/bin/ks
-bin/qcks:vendor/bin/qcks
-bin/qmuxd:vendor/bin/qmuxd
-bin/rfs_access:vendor/bin/rfs_access
-bin/rmt_storage:vendor/bin/rmt_storage
-bin/netmgrd:vendor/bin/netmgrd
-vendor/lib/libril-qcril-hook-oem.so
-vendor/lib/libcneapiclient.so
-lib/libprotobuf-cpp-full.so:vendor/lib/libprotobuf-cpp-full.so
 
 # Sensors
 lib/hw/sensors.msm8974.so:vendor/lib/hw/sensors.vendor.msm8974.so
