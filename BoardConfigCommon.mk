@@ -152,11 +152,8 @@ BOARD_ROOT_EXTRA_FOLDERS := firmware firmware-modem efs
 BOARD_ROOT_EXTRA_SYMLINKS := /data/tombstones:/tombstones
 
 # Power HAL
-TARGET_HAS_LEGACY_POWER_STATS := true
-TARGET_HAS_NO_WLAN_STATS := true
 TARGET_USES_INTERACTION_BOOST := true
 TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(COMMON_PATH)/power/power_ext.c
-TARGET_POWERHAL_VARIANT := qcom
 
 # Exclude serif fonts for saving system.img size.
 #EXCLUDE_SERIF_FONTS := true
