@@ -22,6 +22,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-aosp
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Advanced Display
 PRODUCT_PACKAGES += \
     AdvancedDisplay
