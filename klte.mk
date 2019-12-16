@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2014-2016 The CyanogenMod Project
-# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -111,6 +111,10 @@ PRODUCT_PACKAGES += \
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+# Doze
+PRODUCT_PACKAGES += \
+    SamsungDoze
 
 # DRM
 PRODUCT_PACKAGES += \
