@@ -53,9 +53,6 @@ on fs
     write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
     write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 53059
 
-    wait /dev/block/platform/msm_sdcc.1
-    symlink /dev/block/platform/msm_sdcc.1 /dev/block/bootdevice
-
     mount none /system/etc/gps.conf /system/etc/gps_debug.conf bind
     
 on post-fs
