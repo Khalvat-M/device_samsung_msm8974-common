@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2016 The Android Open Source Project
- * Copyright (C) 2016 The Mokee Project
- * Copyright (C) 2016 The CyanogenMod Project
+ *
+ *
+ * Copyright (C) 2020 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
  */
 
 #define LOG_TAG "FingerprintHal_msm8974"
-#define LOG_NDEBUG 1
+#define LOG_NDEBUG 0
 
 #include <errno.h>
 #include <endian.h>
@@ -538,6 +538,8 @@ static int fingerprint_cancel(struct fingerprint_device *device) {
             if (tz.state == STATE_IDLE)
                 break;
         }
+        // Not really an error, but framework expects us to send it.
+        send_error_notice(vdev, FINGERPRINT_ERROR_CANCELED);
     }
 
     return ret;
