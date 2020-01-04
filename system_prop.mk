@@ -43,6 +43,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_buffer_age=false \
     debug.hwui.renderer=opengl \
     debug.sf.enable_gl_backpressure=1 \
+    debug.sf.latch_unsignaled=1 \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0
 
