@@ -6,6 +6,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
+    debug.stagefright.omx_default_rank.sw-audio=1 \
+    debug.stagefright.omx_default_rank=0 \
     af.fast_track_multiplier=1 \
     audio.deep_buffer.media=true \
     audio.offload.buffer.size.kb=32 \
