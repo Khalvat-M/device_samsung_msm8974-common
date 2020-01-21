@@ -260,10 +260,6 @@ subsystem msm_camera
 /sys/devices/f9927000.i2c/i2c-5/5-0039/iio:device* in_illuminance0_input		0660   system     radio
 /sys/devices/f9927000.i2c/i2c-5/5-0039/iio:device* in_proximity0_input			0660   system     radio
 
-/sys/devices/f9968000.i2c/i2c-12/12-0068/iio:device* buffer                             0777   system     radio
-/sys/devices/f9968000.i2c/i2c-12/12-0068/iio:device* scan_elements                      0777   system     radio
-/sys/devices/f9968000.i2c/i2c-12/12-0068/iio:device* trigger                            0777   system     radio
-/sys/devices/f9968000.i2c/i2c-12/12-0068/iio:device* power                              0777   system     radio
 
 /sys/devices/f9968000.i2c/i2c-12/12-0068/iio:device* uevent				0660   system     radio
 /sys/devices/f9968000.i2c/i2c-12/12-0068/iio:device* dev				0660   system     radio
