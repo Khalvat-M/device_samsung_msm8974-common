@@ -17,7 +17,7 @@
         <value>4.5</value>
         <value>4.5</value>
     </array>
-    <array name="cpu.speeds">       
+    <array name="cpu.speeds">
         <value>300000</value>
         <value>422400</value>
         <value>652800</value>
@@ -37,21 +37,21 @@
     </array>
     <item name="cpu.idle">3.1</item>
     <item name="cpu.awake">20.5</item>
-    <array name="cpu.active"> 
-        <value>45</value>
-        <value>56</value>
-        <value>74</value>
-        <value>97</value>   
-        <value>114</value>
-        <value>122</value>
-        <value>132</value>
-        <value>176</value>
-        <value>203</value>
-        <value>213</value>
-        <value>232</value>
-        <value>265</value>
-        <value>313</value>
-        <value>353</value>
+    <array name="cpu.active">
+        <value>51.37</value>
+        <value>93.97</value>
+        <value>115.53</value>
+        <value>138.22</value>
+        <value>145.29</value>
+        <value>182.41</value>
+        <value>194.69</value>
+        <value>206.29</value>
+        <value>243.09</value>
+        <value>272.58</value>
+        <value>282.84</value>
+        <value>308.24</value>
+        <value>346.81</value>
+        <value>405.82</value>
     </array>
     <item name="battery.capacity">2800</item>
     <array name="wifi.batchedscan">
