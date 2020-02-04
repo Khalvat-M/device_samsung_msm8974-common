@@ -1,0 +1,2 @@
+allow hal_light_default sysfs_sec_led:dir search;
+allow hal_light_default sysfs_sec_led:file rw_file_perms;
