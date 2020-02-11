@@ -70,21 +70,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.data.netmgrd.qos.enable=true \
-    ro.telephony.default_network=9 \
-    persist.data.qmi.adb_logmask=0 \
-    persist.qcril.disable_retry=true \
     rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
-    ro.use_data_netmgrd=true
-
-
-# Ril sends only one RIL_UNSOL_CALL_RING, so set call_ring.multiple to false
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.call_ring.multiple=0 \
-    persist.telephony.oosisdc=false \
     ril.subscription.types=NV,RUIM \
+    ro.use_data_netmgrd=true \
+    ro.baseband.arch=msm \
+    ro.data.large_tcp_window_size=true \
+    ro.ril.telephony.mqanelements=5 \
+    ro.ril.hsupa.category=6 \
+    ro.ril.def.agps.mode=1 \
+    ro.telephony.default_network=9 \
+    ro.telephony.call_ring.multiple=0 \
     persist.radio.apm_sim_not_pwdn=1 \
-    ro.ril.telephony.mqanelements=5
+    persist.data.netmgrd.qos.enable=true \
+    persist.data.qmi.adb_logmask=0 \
+    persist.telephony.oosisdc=false \
+    persist.qcril.disable_retry=true
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
