@@ -8,15 +8,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
     debug.stagefright.omx_default_rank=0 \
     af.fast_track_multiplier=1 \
-    audio.deep_buffer.media=true \
-    audio.offload.buffer.size.kb=32 \
-    audio.offload.pcm.16bit.enable=true \
-    audio.offload.pcm.24bit.enable=true \
-    audio.offload.video=true \
+    audio.offload.disable=true \
+    ro.vendor.audio.sdk.fluencetype=fluence \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=false \
-    ro.vendor.audio.sdk.fluencetype=fluence \
     vendor.audio.offload.multiple.enabled=false \
     vendor.audio_hal.period_size=192 \
     vendor.dedicated.device.for.voip=true \
@@ -41,6 +37,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.cabl=1 \
     ro.secwvk=144 \
     ro.sf.lcd_density=480 \
+    ro.opengles.version=196608 \
     debug.hwui.use_buffer_age=false \
     debug.hwui.renderer=opengl \
     debug.sf.enable_gl_backpressure=1 \
@@ -63,6 +60,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.nfc.port=I2C
+
+# NITZ
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.rild.nitz_plmn="" \
+    persist.rild.nitz_long_ons_0="" \
+    persist.rild.nitz_long_ons_1="" \
+    persist.rild.nitz_long_ons_2="" \
+    persist.rild.nitz_long_ons_3="" \
+    persist.rild.nitz_short_ons_0="" \
+    persist.rild.nitz_short_ons_1="" \
+    persist.rild.nitz_short_ons_2="" \
+    persist.rild.nitz_short_ons_3=""
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -93,6 +102,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Tethering
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
+
+# Time
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.timed.enable=true
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
