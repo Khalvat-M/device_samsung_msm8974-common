@@ -1,7 +1,0 @@
-# RIL
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.multisim.config=dsds \
-    ro.multisim.audio_follow_default_sim=false \
-    ro.multisim.simslotcount=2 \
-    ro.multisim.set_audio_params=true \
-    ro.telephony.ril.config=simactivation
