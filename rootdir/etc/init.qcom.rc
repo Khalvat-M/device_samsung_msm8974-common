@@ -43,6 +43,11 @@ on early-init
 on init
     write /proc/sys/vm/page-cluster 0
 
+    # Setup all the sub-system as related
+    write /sys/bus/msm_subsys/devices/subsys0/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys1/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys2/restart_level RELATED
+
 on fs
     mount_all /vendor/etc/fstab.qcom
 
