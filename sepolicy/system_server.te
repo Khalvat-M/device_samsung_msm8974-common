@@ -15,3 +15,5 @@ allow system_server {
 
 # Smart charger
 allow system_server sysfs_battery_supply:file rw_file_perms;
+
+allow system_server unlabeled:file unlink;

@@ -51,3 +51,7 @@ allow init {
     sysfs_sec_key
     sysfs_thermal
 }:file w_file_perms;
+
+allow init efs_file:dir mounton;
+allow init init:capability2 block_suspend;
+allow init vendor_file:file execute_no_trans;

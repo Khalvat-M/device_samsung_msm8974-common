@@ -1,1 +1,13 @@
+allow vendor_init firmware_file:dir { create setattr };
+allow vendor_init firmware_file:lnk_file read;
+allow vendor_init packages_list_file:file { getattr open read };
+allow vendor_init radio_data_file:lnk_file unlink;
+allow vendor_init seapp_contexts_file:file { getattr open read };
+allow vendor_init selinuxfs:file { getattr open read write };
+allow vendor_init sysfs:file relabelfrom;
+allow vendor_init sysfs:dir relabelfrom;
+allow vendor_init system_data_file:file { create open setattr write };
+allow vendor_init system_data_file:lnk_file { create getattr unlink };
 allow vendor_init wifi_data_file:file { create getattr open setattr write };
+allow vendor_init unlabeled:dir { search setattr };
+allow vendor_init unlabeled:file { setattr };

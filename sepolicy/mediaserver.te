@@ -1,3 +1,17 @@
 allow mediaserver sysfs_camera:dir search;
 allow mediaserver sysfs_camera:file r_file_perms;
 allow mediaserver vendor_file:file execmod;
+allow mediaserver camera_device:chr_file rw_file_perms;
+allow mediaserver camera_device:dir search;
+allow mediaserver camera_prop:property_service set;
+allow mediaserver cameraproxy_service:service_manager find;
+allow mediaserver cameraserver_service:service_manager add;
+allow mediaserver camera_socket:sock_file w_file_perms;
+allow mediaserver fwk_camera_hwservice:hwservice_manager add;
+allow mediaserver hal_camera_hwservice:hwservice_manager find;
+allow mediaserver hal_lineage_camera_motor_hwservice:hwservice_manager find;
+allow mediaserver hidl_base_hwservice:hwservice_manager add;
+allow mediaserver sensor_privacy_service:service_manager find;
+allow mediaserver system_file:file execmod;
+
+set_prop(mediaserver, camera_prop)

@@ -10,3 +10,5 @@ allow rild sysfs_sec_key:file rw_file_perms;
 allow rild device:chr_file { ioctl open read };
 allow rild unlabeled:dir search;
 allow rild unlabeled:file { getattr open read };
+
+allow rild system_data_file:lnk_file read;
