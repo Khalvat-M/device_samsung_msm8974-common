@@ -1,7 +1,7 @@
-Copyright 2018 - The HavocOS Project
+Copyright 2020 - The LineageOS Project
 
 # Device tree for Samsung Galaxy S5 ALL-VARIANT (Snapdragon)
-## Unified variants: SM-G900F, SM-G900I, SM-G900M, SM-G900T, SM-G900W8, SM-G900H, SM-G900FD, SM-G900P, SM-G900A, SC-04F, SM-G9008W, SM-G900L, SM-G900FQ, SM-G900K, SM-G900S
+## Unified variants: SM-G900F, SM-G900M, SM-G900R4, SM-G900R7, SM-G900T, SM-G900V, SM-G900W8, SM-S902L, SM-G900I, SM-G900P, SM-G900V, SM-S902L, SM-G900K, SM-G900L, SM-G900S, SCL23, SM-G9006V, SM-G9008V, SM-G900R4, SM-G900R7, SM-G870F, SM-G860P
 
 Basic   | Specification List
 -------:|:-------------------------
@@ -20,5 +20,5 @@ Rear Camera  | 16 MP, f/2.2, 31mm, OIS, autofocus, LED flash
 Front Camera | 2 MP, f/2.4, 27mm (wide), Dual video call
 Release Date | April 2014
 
-![Galaxy S5 ALL-VARIANT](http://xphone24.com/foto/samsung_galaxy_s5.png "Galaxy S5 ALL-VARIANT")
+![Galaxy S5](http://cdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s5-g900f-1.jpg "Galaxy S5")
 
