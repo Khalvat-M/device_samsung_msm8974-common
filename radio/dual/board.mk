@@ -1,5 +1,0 @@
-# Audio
-AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
-
-# Radio/RIL
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/radio/dual/manifest.xml
