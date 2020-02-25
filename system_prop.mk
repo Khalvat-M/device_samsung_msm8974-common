@@ -75,11 +75,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so
+    ro.vendor.extension_library=/system/vendor/lib/libqti-perfd-client.so
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
+    rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so \
     ril.subscription.types=NV,RUIM \
     ro.use_data_netmgrd=true \
     ro.baseband.arch=msm \
