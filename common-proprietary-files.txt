@@ -29,6 +29,8 @@ vendor/lib/libfastcvopt.so
 vendor/lib/rfsa/adsp/libadsp_fd_skel.so
 
 # Bluetooth firmware - Pinned to  G9006VZNS1CRH1_G9006VCHU1CRH1
+vendor/bin/hci_qcomm_init
+vendor/lib/libbtnv.so
 vendor/firmware/bcm4350_V0395.0797.hcd|ff51604a8fc4cd1179d1ac869f517a413baad27f
 vendor/firmware/bcm4350_V0395.0797_murata.hcd|ff51604a8fc4cd1179d1ac869f517a413baad27f
 vendor/firmware/bcm4350_V0395.0797_semco.hcd|ff51604a8fc4cd1179d1ac869f517a413baad27f
