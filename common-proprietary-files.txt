@@ -224,11 +224,7 @@ vendor/lib/librpmb.so
 vendor/lib/libssd.so
 
 # IPC router security
-bin/irsc_util:vendor/bin/irsc_util
 etc/sec_config:vendor/etc/sec_config
-
-# IPv6 Tethering
-bin/radish:vendor/bin/radish
 
 # Media
 vendor/lib/libOmxAacDec.so
@@ -240,71 +236,53 @@ vendor/lib/libOmxWmaDec.so
 # Perf
 vendor/lib/libqti-perfd-client.so
 
-# Qualcomm BACON
-vendor/lib/libxml.so
-
 # Qualcomm Framework G9006VZNS1CRH1_G9006VCHU1CRH1
 lib/libperipheral_client.so:vendor/lib/libperipheral_client.so
 
-# Radio
-# Qualcomm framework - pinned blobs from bacon lollipop
-lib/libmdmdetect.so:vendor/lib/libmdmdetect.so
-vendor/lib/libconfigdb.so|19625a4618fda92c5031d9474d067d68b44fdbeb
-vendor/lib/libdiag.so|a4d055959db801a00dd34500256bb5f7277e21d1
-vendor/lib/libdsi_netctrl.so|01c8f2cd060c361e2967987192007530dbe84aff
-vendor/lib/libdsutils.so|bb0a6b9720cef673dea1daf47ad03046ef1b263f
-vendor/lib/libidl.so|bb0a6b9720cef673dea1daf47ad03046ef1b263f
-vendor/lib/libperipheral_client.so|6ea3985b1d151e9ec95e6096e671a23612cb59eb
-vendor/lib/libqcci_legacy.so|092d3b4e08f7e0e349457d23ace12d2057fcf894
-vendor/lib/libqdi.so|72960df1c89403bb969a2cce9e86cc295946b91a
-vendor/lib/libqdp.so|b5df438722721228af8d05ab25c9d0f8bf5282b3
-vendor/lib/libqmi.so|c2f589d04611edaa1634263bcdcd747aab9e26af
-vendor/lib/libqmi_cci.so|c220a3b244b9d83aeef5ddc8b839ae0bd017e146
-vendor/lib/libqmi_client_qmux.so|99b7326ea1301e27329235767290bd70c41a4b9c
-vendor/lib/libqmi_common_so.so|9a50d5845caa38002190acb902350f226f6f5066
-vendor/lib/libqmi_csi.so|8c0888258ab27b855d99927b2dbf8f55f3b9c457
-vendor/lib/libqmi_encdec.so|5d1861e9ea26e4fb089c82456bcef9c297fa7f14
-vendor/lib/libqmiservices.so|666fd967af1ff17367eca9ed6d9e236976c0f4e7
-vendor/lib/libsmemlog.so|e6044fa96873c1fbad21b9acb9d8f61d53a99c0d
-vendor/lib/libsystem_health_mon.so|25c0a0d1c1e72f2f49e20771877973b34ebe410a
-vendor/lib/libxml.so|d117a9386d3ea5a989b33d8ed9abc199e5589f8a
+# Qualcomm framework (from FP2 N Fairphone/FP2/FP2:7.1.2/19.08.1/gms-fad0fe00)
+bin/irsc_util:vendor/bin/irsc_util
+vendor/lib/libdiag.so
+vendor/lib/libdsi_netctrl.so
+vendor/lib/libdsutils.so
+vendor/lib/libidl.so
+vendor/lib/libqcci_legacy.so
+vendor/lib/libqdi.so
+vendor/lib/libqdp.so
+vendor/lib/libqmi.so
+vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_client_helper.so
+vendor/lib/libqmi_client_qmux.so
+vendor/lib/libqmi_common_so.so
+vendor/lib/libqmi_csi.so
+vendor/lib/libqmi_encdec.so
+vendor/lib/libqmiservices.so
+vendor/lib/libsmemlog.so
+vendor/lib/libsystem_health_mon.so
 
-# Radio pinned blobs from bacon lollipop
-bin/efsks:vendor/bin/efsks
-bin/ks:vendor/bin/ks
-bin/qcks:vendor/bin/qcks
+# Radio from (from FP2 N Fairphone/FP2/FP2:7.1.2/19.08.1/gms-fad0fe00)
+-app/shutdownlistener/shutdownlistener.apk:vendor/app/shutdownlistener/shutdownlistener.apk
+bin/netmgrd:vendor/bin/netmgrd
+bin/qmuxd:vendor/bin/qmuxd
 bin/rfs_access:vendor/bin/rfs_access
 bin/rmt_storage:vendor/bin/rmt_storage
-vendor/bin/netmgrd|2f0914921a38f51e03d876fefba4177994e7080c
-vendor/bin/qmuxd|51adb63ef2c5dc4a01a75de5a922f626f251fe98
-vendor/lib/libnetmgr.so|354994131a609339abbfc438a0c2cccb6a76f492
-vendor/lib/libril-qc-qmi-1.so|a54cac69bbb52fa964d651f09c0034298c8eb3ab
-vendor/lib/libril-qcril-hook-oem.so|7ab5908e7a15f69cab5fc7b1c43e128acba119d5
-
-# Radio more from g2
-etc/permissions/qcrilhook.xml:vendor/etc/permissions/qcrilhook.xml
+etc/data/dsi_config.xml:vendor/etc/data/dsi_config.xml
+etc/data/netmgr_config.xml:vendor/etc/data/netmgr_config.xml
 etc/permissions/qcnvitems.xml:vendor/etc/permissions/qcnvitems.xml
--framework/qcnvitems.jar:vendor/framework/qcnvitems.jar
--framework/qcrilhook.jar:vendor/framework/qcrilhook.jar
--app/qcrilmsgtunnel/qcrilmsgtunnel.apk:vendor/app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-vendor/lib/libqmi_client_helper.so
-vendor/lib/libqmi_csvt_srvc.so
-lib/libuicc.so:vendor/lib/libuicc.so
-lib/libvss_bsp_qcci.so:vendor/lib/libvss_bsp_qcci.so
-lib/libvss_common_core.so:vendor/lib/libvss_common_core.so
-lib/libvss_common_idl.so:vendor/lib/libvss_common_idl.so
-lib/libvss_common_iface.so:vendor/lib/libvss_common_iface.so
-lib/libvss_dmi_qcci.so:vendor/lib/libvss_dmi_qcci.so
-lib/libvss_gnss_qcci.so:vendor/lib/libvss_gnss_qcci.so
-lib/libvss_ims_qcci.so:vendor/lib/libvss_ims_qcci.so
-lib/libvss_nv_core.so:vendor/lib/libvss_nv_core.so
-lib/libvss_nv_idl.so:vendor/lib/libvss_nv_idl.so
-lib/libvss_nv_iface.so:vendor/lib/libvss_nv_iface.so
-lib/libvss_resim_core.so:vendor/lib/libvss_resim_core.so
-lib/libvss_resim_idl.so:vendor/lib/libvss_resim_idl.so
-lib/libvss_resim_iface.so:vendor/lib/libvss_resim_iface.so
-lib/libvss_sar_qcci.so:vendor/lib/libvss_sar_qcci.so
+etc/permissions/qcrilhook.xml:vendor/etc/permissions/qcrilhook.xml
+framework/qcnvitems.jar:vendor/framework/qcnvitems.jar
+framework/qcrilhook.jar:vendor/framework/qcrilhook.jar
+framework/qti-telephony-common.jar
+lib/libmdmdetect.so:vendor/lib/libmdmdetect.so
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/lib/libcneapiclient.so
+vendor/lib/libconfigdb.so
+vendor/lib/liblqe.so
+vendor/lib/libnetmgr.so
+vendor/lib/libperipheral_client.so
+vendor/lib/libril-qc-radioconfig.so
+vendor/lib/libril-qc-qmi-1.so
+vendor/lib/libril-qcril-hook-oem.so
+vendor/lib/libxml.so
 
 # Sensors
 lib/hw/sensors.msm8974.so:vendor/lib/hw/sensors.vendor.msm8974.so
@@ -355,7 +333,7 @@ vendor/lib/libscale.so|b44f44c633fa404d10e76aaa23593b516e08e2b8
 vendor/firmware/a330_pfp.fw|3e2fcee7276ded819cf2d95864fdd6788a484ee1
 vendor/firmware/a330_pm4.fw|ae739ea812f9e4462d7bba8b9ead5782d4496618
 
-# GPS (Updated from onyx)
+# GPS (from FP2 N Fairphone/FP2/FP2:7.1.2/19.08.1/gms-fad0fe00)
 bin/loc_launcher:vendor/bin/loc_launcher
 lib/libloc_api_v02.so:vendor/lib/libloc_api_v02.so
 lib/libloc_ds_api.so:vendor/lib/libloc_ds_api.so
