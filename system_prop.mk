@@ -84,6 +84,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
+    rild.libpath=/vendor/lib/libril-wrapper.so \
     ril.subscription.types=NV,RUIM \
     ro.use_data_netmgrd=true \
     ro.baseband.arch=msm \
