@@ -43,6 +43,10 @@
 # Rootfs mount
 /tombstones            				        u:object_r:rootfs:s0
 
+# cgroup
+/dev/cpuset(/.*)?    u:object_r:cgroup:s0
+/dev/stune(/.*)?     u:object_r:cgroup:s0
+
 # executeables
 /system/vendor/bin/macloader                            u:object_r:macloader_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.samsung                u:object_r:hal_ir_default_exec:s0
