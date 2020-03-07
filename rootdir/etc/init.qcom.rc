@@ -56,6 +56,8 @@ on fs
     wait /dev/block/platform/msm_sdcc.1
     symlink /dev/block/platform/msm_sdcc.1 /dev/block/bootdevice
 
+    mount none /system/etc/gps.conf /system/etc/gps_debug.conf bind
+    
 on post-fs
     # for controlling write performance boosting
     chown system radio /sys/block/mmcblk0/bkops_en
