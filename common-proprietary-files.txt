@@ -345,10 +345,10 @@ vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
 
-# Renderscript (Google bullhead - OPR4.170623.006)
-vendor/lib/libRSDriver_adreno.so|2044baf0169177e52aba6d7138f80559ecf2b58d
-vendor/lib/librs_adreno.so|cceaf847d749ac2f1a3af3a1ae6ba653d93e0ed9
-vendor/lib/librs_adreno_sha1.so|e797997d3ac69dfa87904863672c5b9769c796cc
+# Renderscript (OnePlus onyx - Oxygen OS 3.1.4 - OnePlusXOxygen_14_201611071506)
+vendor/lib/libRSDriver_adreno.so|371dc9e34dfb3b4f3352d285d7dbfdd2d30daf23
+vendor/lib/librs_adreno.so|483b327e1a7fde0a898019d5958e43097fd87f98
+vendor/lib/librs_adreno_sha1.so|e254ee7df74b1f0ecd73fc6b02e5bd5367a83de6
 
 # STLport (Camera/RIL) - local compile LineageOS/external/stlport@984b8432
 vendor/lib/libstlport.so|0be0a0d13e12fbf95d97d309dcbc25d3f969a469
