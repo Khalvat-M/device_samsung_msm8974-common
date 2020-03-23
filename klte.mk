@@ -322,6 +322,3 @@ $(call inherit-product-if-exists, vendor/samsung/klte-common/klte-common-vendor.
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/msm8974-common/msm8974-common-vendor.mk)
-
-# common msm8974
-$(call inherit-product, device/samsung/qcom-common/qcom-common.mk)

@@ -13,9 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from qcom-common
-include device/samsung/qcom-common/BoardConfigCommon.mk
-
 # Platform
 TARGET_BOARD_PLATFORM := msm8974
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
@@ -52,9 +49,14 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_SAMSUNG_BLUETOOTH := true
 
 # Bootloader
+TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 
 # Architecture
+TARGET_ARCH := arm
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := generic
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 TARGET_CPU_VARIANT_RUNTIME := krait
@@ -77,6 +79,8 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # Display
+TARGET_USES_C2D_COMPOSITION := true
+TARGET_USES_ION := true
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x02000000U
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
@@ -123,6 +127,9 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/vendor/bin/mm-qcamera-daemon=22 \
     /system/vendor/bin/hw/rild=27
 
+# LineageHW
+BOARD_HARDWARE_CLASS += hardware/samsung/lineagehw
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 20971520		# 20M
 BOARD_CACHEIMAGE_PARTITION_SIZE := 314572800		# 300M
@@ -140,6 +147,9 @@ BOARD_ROOT_EXTRA_SYMLINKS := /data/tombstones:/tombstones
 TARGET_USES_INTERACTION_BOOST := true
 TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(COMMON_PATH)/power/power_ext.c
 
+# Qualcomm support
+BOARD_USES_QCOM_HARDWARE := true
+
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
 
@@ -153,6 +163,8 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_DEVICE_DIRS += device/samsung/klte-common
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+BOARD_HAS_DOWNLOAD_MODE := true
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
