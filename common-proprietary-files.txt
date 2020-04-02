@@ -31,6 +31,8 @@ vendor/lib/rfsa/adsp/libadsp_fd_skel.so
 # Bluetooth firmware - Pinned to  G9006VZNS1CRH1_G9006VCHU1CRH1
 vendor/bin/hci_qcomm_init
 vendor/lib/libbtnv.so
+vendor/lib/libaptX_encoder.so
+vendor/lib/libaptXHD_encoder.so
 vendor/firmware/bcm4350_V0395.0797.hcd|ff51604a8fc4cd1179d1ac869f517a413baad27f
 vendor/firmware/bcm4350_V0395.0797_murata.hcd|ff51604a8fc4cd1179d1ac869f517a413baad27f
 vendor/firmware/bcm4350_V0395.0797_semco.hcd|ff51604a8fc4cd1179d1ac869f517a413baad27f
@@ -311,8 +313,6 @@ etc/wifi/nvram_net.txt_muratafem1:vendor/etc/wifi/nvram_net.txt_murata
 etc/wifi/nvram_net.txt_semco3rd:vendor/etc/wifi/nvram_net.txt_semco3rd
 
 # MSM8974-COMMON START FROM HERE
-# aptX (Moto griffin - NCLS25.86-11-4-6-5)
-vendor/lib/libaptX_encoder.so|b03772672144d4b750a5672c2922aded93bb0512
 
 # Graphics (OnePlus onyx - Oxygen OS 3.1.4 - OnePlusXOxygen_14_201611071506)
 vendor/lib/egl/eglsubAndroid.so|b8a5790c5b4ba4cf0018c94066104610c821ed8e
