@@ -20,8 +20,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.bt.bdaddr_path=/efs/bluetooth/bt_addr
-
+    ro.bt.bdaddr_path=/efs/bluetooth/bt_addr \
+    persist.bt.enableAptXHD=true \
+    persist.service.btui.use_aptx=1
+    
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
