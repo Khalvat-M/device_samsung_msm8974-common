@@ -40,7 +40,7 @@ vendor/firmware/bcm4350_V0395.0797_semco3rd.hcd|ff51604a8fc4cd1179d1ac869f517a41
 vendor/firmware/bcm4350_V0395.0797_semcosh.hcd|ff51604a8fc4cd1179d1ac869f517a413baad27f
 vendor/firmware/bcm4350_V0395.0798_wisol.hcd|c4a2f642b274de774014aafacf3ed4253b000aa9
 
-# Camera
+# Camera G900FXXU1CSA1_G900FVIA1CSC1_VIA
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 lib/hw/camera.msm8974.so:vendor/lib/hw/camera.vendor.msm8974.so
 lib/libarcsoft_nighthawk.so:vendor/lib/libarcsoft_nighthawk.so
