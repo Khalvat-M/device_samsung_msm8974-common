@@ -127,9 +127,6 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/vendor/bin/mm-qcamera-daemon=22 \
     /system/vendor/bin/hw/rild=27
 
-# LineageHW
-BOARD_HARDWARE_CLASS += hardware/samsung/lineagehw
-
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 20971520		# 20M
 BOARD_CACHEIMAGE_PARTITION_SIZE := 314572800		# 300M
