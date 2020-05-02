@@ -77,6 +77,7 @@ ifeq ($(HOST_OS),linux)
     WITH_DEXPREOPT := true
   endif
 endif
+WITH_DEXPREOPT_DEBUG_INFO := false
 
 # Display
 TARGET_USES_C2D_COMPOSITION := true
