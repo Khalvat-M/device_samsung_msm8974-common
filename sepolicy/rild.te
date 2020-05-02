@@ -14,3 +14,8 @@ allow rild unlabeled:dir search;
 allow rild unlabeled:file { getattr open read };
 
 allow rild system_data_file:lnk_file read;
+
+allow rild app_efs_file:dir search;
+allow rild app_efs_file:file r_file_perms;
+allow rild imei_efs_file:dir search;
+allow rild imei_efs_file:file r_file_perms;

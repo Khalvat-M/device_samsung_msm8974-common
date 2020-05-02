@@ -5,6 +5,17 @@
 /dev/ttyHS3                                             u:object_r:audio_device:s0
 /dev/vfsspi                                             u:object_r:vfsspi_device:s0
 
+# efs files
+/efs/FactoryApp(/.*)?                                   u:object_r:app_efs_file:s0
+/efs/bluetooth(/.*)?                                    u:object_r:bluetooth_efs_file:s0
+/efs/carrier(/.*)?                                      u:object_r:carrier_efs_file:s0
+/efs/drm(/.*)?                                          u:object_r:drm_efs_file:s0
+/efs/gyro_cal_data                                      u:object_r:sensors_efs_file:s0
+/efs/hw_offset                                          u:object_r:sensors_efs_file:s0
+/efs/imei(/.*)?                                         u:object_r:imei_efs_file:s0
+/efs/wifi(/.*)?                                         u:object_r:wifi_efs_file:s0
+
+
 # sysfs
 /sys/devices(/.*)?/input/input[1-2]/enabled             u:object_r:sysfs_hal_pwr:s0
 
@@ -34,10 +45,6 @@
 /dev/pn547                                              u:object_r:nfc_device:s0
 /dev/rfkill                                             u:object_r:wlan_device:s0
 /dev/sec-nfc                                            u:object_r:nfc_device:s0
-
-# efs files
-/efs/bluetooth(/.*)?                                    u:object_r:bluetooth_efs_file:s0
-/efs/wifi(/.*)?                                         u:object_r:wifi_efs_file:s0
 
 # root mount
 /firmware                                               u:object_r:firmware_file:s0
