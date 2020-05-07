@@ -1,7 +1,6 @@
-Copyright 2020 - The LineageOS Project
+Copyright 2020 - The Khavat-M Project
 
-# Device tree for Samsung Galaxy S5 ALL-VARIANT (Snapdragon)
-## Unified variants: SM-G900F, SM-G900M, SM-G900R4, SM-G900R7, SM-G900T, SM-G900V, SM-G900W8, SM-S902L, SM-G900I, SM-G900P, SM-G900V, SM-S902L, SM-G900K, SM-G900L, SM-G900S, SCL23, SM-G9006V, SM-G9008V, SM-G900R4, SM-G900R7, SM-G870F, SM-G860P
+# Device configuration for Samsung Galaxy S5 Single-SIM
 
 Basic   | Specification List
 -------:|:-------------------------
@@ -20,5 +19,5 @@ Rear Camera  | 16 MP, f/2.2, 31mm, OIS, autofocus, LED flash
 Front Camera | 2 MP, f/2.4, 27mm (wide), Dual video call
 Release Date | April 2014
 
-![Galaxy S5](http://cdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s5-g900f-1.jpg "Galaxy S5")
+![Galaxy S5](https://github.com/Khalvat-M/android_device_samsung_klte-common/blob/10.0/information/klte.gif)
 
