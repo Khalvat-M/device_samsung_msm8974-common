@@ -89,7 +89,6 @@ PRODUCT_PACKAGES += \
     camera.msm8974 \
     libshim_binder \
     libshim_camera \
-    libshim_unwind \
     libxml2 \
     Snap
 
