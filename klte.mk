@@ -285,7 +285,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_k.mk)
 
 # Telephony
 PRODUCT_PACKAGES += \
-    qti-telephony-common \
     telephony-ext \
     telephony-common \
     qti-telephony-hidl-wrapper \
@@ -295,9 +294,6 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-    
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-8974.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-8974.conf
