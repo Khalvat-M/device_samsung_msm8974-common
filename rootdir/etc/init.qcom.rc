@@ -198,6 +198,7 @@ on post-fs-data
     rm /data/data/com.android.providers.telephony/shared_prefs
 
     setprop vold.post_fs_data_done 1
+    start fix
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
@@ -850,6 +851,11 @@ service charger /system/bin/charger
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
 
+service fix /vendor/bin/init.fix.sh
+   user root
+   group root system
+   oneshot
+   
 on property:dev.bootcomplete=1
     trigger enable-low-power
 
