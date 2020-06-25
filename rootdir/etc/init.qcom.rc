@@ -203,6 +203,9 @@ on post-fs-data
     rm /data/data/com.android.providers.telephony/shared_prefs
 
     setprop vold.post_fs_data_done 1
+    setprop sys.usb.ffs.aio_compat 1
+    setprop persist.adb.nonblocking_ffs 0
+    setprop ro.adb.nonblocking_ffs 0
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
