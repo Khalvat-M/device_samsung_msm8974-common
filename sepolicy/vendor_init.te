@@ -11,3 +11,4 @@ allow vendor_init system_data_file:lnk_file { create getattr unlink };
 allow vendor_init wifi_data_file:file { create getattr open setattr write };
 allow vendor_init unlabeled:dir { search setattr };
 allow vendor_init unlabeled:file { setattr };
+allow vendor_init unlabeled:{ dir file } { getattr relabelfrom };
