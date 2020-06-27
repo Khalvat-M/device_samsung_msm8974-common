@@ -27,7 +27,7 @@ type app_efs_file, file_type;
 type carrier_efs_file, file_type;
 type drm_efs_file, file_type;
 type imei_efs_file, file_type;
-type sensors_efs_file, file_type;
+type sensor_efs_file, file_type;
 
 type sysfs_fingerprint, fs_type, sysfs_type;
 type vfsspi_data_file, file_type, data_file_type;

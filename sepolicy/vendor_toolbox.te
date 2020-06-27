@@ -23,7 +23,7 @@ allow vendor_toolbox {
     carrier_efs_file
     drm_efs_file
     imei_efs_file
-    sensors_efs_file
+    sensor_efs_file
     wifi_efs_file
     unlabeled
 }:dir { r_dir_perms setattr };
@@ -36,7 +36,7 @@ allow vendor_toolbox {
     carrier_efs_file
     drm_efs_file
     imei_efs_file
-    sensors_efs_file
+    sensor_efs_file
     wifi_efs_file
     unlabeled
 }:file { r_file_perms setattr };
