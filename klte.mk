@@ -263,6 +263,7 @@ PRODUCT_COPY_FILES += \
 
 # Radio
 PRODUCT_PACKAGES += \
+    libaudioclient_shim \
     libsecnativefeature \
     libcnefeatureconfig \
     librmnetctl \
