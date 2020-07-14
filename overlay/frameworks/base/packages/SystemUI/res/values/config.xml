@@ -38,4 +38,6 @@
          increase the rate of unintentional unlocks. -->
     <bool name="config_lockscreenAntiFalsingClassifierEnabled">false</bool>
 
+    <!-- do not use H265 encoder for screen recordings -->
+    <bool name="config_useNewScreenRecEncoder">false</bool>
 </resources>
