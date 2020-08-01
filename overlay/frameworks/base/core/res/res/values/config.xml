@@ -426,7 +426,4 @@
         <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
         <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
     </string-array>
-    
-    <!-- Whether to use in-built Screen Record service -->
-    <bool name="config_showScreenRecord">false</bool>
 </resources>
