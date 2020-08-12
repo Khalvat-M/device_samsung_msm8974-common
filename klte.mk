@@ -333,6 +333,10 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
   
+# Widevine DRM
+PRODUCT_PACKAGES += \
+    libprotobuf_shim
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service.legacy \
