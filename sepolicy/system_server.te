@@ -8,6 +8,8 @@ allow system_server {
     qti_debugfs
 }:file r_file_perms;
 
+allow system_server app_zygote:process { getpgid };
+
 # Smart charger
 allow system_server sysfs_battery_supply:file rw_file_perms;
 
