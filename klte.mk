@@ -327,6 +327,7 @@ PRODUCT_PACKAGES += \
     hostapd \
     libnetcmdiface \
     macloader \
+    TetheringConfigOverlay \
     wificond \
     WifiOverlay \
     wpa_supplicant \
