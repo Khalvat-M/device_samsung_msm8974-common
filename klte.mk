@@ -283,6 +283,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_k.mk)
 PRODUCT_PACKAGES += \
     telephony-ext \
     telephony-common \
+    qti-telephony-common \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
