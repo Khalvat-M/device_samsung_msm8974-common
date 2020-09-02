@@ -78,9 +78,9 @@ PRODUCT_PACKAGES += \
     libbt-vendor
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bluetooth/btconf/auto_pair_devlist.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/bluetooth/auto_pair_devlist.conf \
-    $(LOCAL_PATH)/bluetooth/btconf/iop_device_list.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/bluetooth/iop_device_list.conf \
-    $(LOCAL_PATH)/bluetooth/btconf/iop_bt.db:$(TARGET_COPY_OUT_SYSTEM)/etc/bluetooth/iop_bt.db
+    $(LOCAL_PATH)/bluetooth/btconf/auto_pair_devlist.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/auto_pair_devlist.conf \
+    $(LOCAL_PATH)/bluetooth/btconf/iop_device_list.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/iop_device_list.conf \
+    $(LOCAL_PATH)/bluetooth/btconf/iop_bt.db:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/iop_bt.db
 
 # Camera
 PRODUCT_PACKAGES += \
