@@ -128,6 +128,9 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/vendor/bin/mm-qcamera-daemon=22 \
     /system/vendor/bin/hw/rild=27
 
+# Offmode Charging
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/samsung/klte-common/charger/images
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 20971520		# 20M
 BOARD_CACHEIMAGE_PARTITION_SIZE := 314572800		# 300M
