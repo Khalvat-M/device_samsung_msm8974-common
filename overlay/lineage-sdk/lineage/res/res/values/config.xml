@@ -75,4 +75,11 @@
          This MUST NOT be set to true on devices produced in 2016 or later -->
     <bool name="config_trustLegacyEncryption">true</bool>
 
+    <!-- Button backlight control. Possible values are:
+            0 - Not supported
+            1 - Supported, but only on/off mode
+            2 - Supported with variable brightness control
+    -->
+    <integer name="config_deviceSupportsButtonBrightnessControl">1</integer>
+
 </resources>
