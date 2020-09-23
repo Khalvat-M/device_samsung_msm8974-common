@@ -138,7 +138,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.cabl=1 \
     ro.secwvk=144 \
     vendor.display.disable_rotator_downscale=1 \
-    vendor.display.disable_scaler=0
+    vendor.display.disable_scaler=0 \
+    vendor.display.disable_skip_validate=1
 
 # fastbootd
 PRODUCT_PROPERTY_OVERRIDES += \
