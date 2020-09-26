@@ -184,6 +184,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.qmi.adb_logmask=0 \
     persist.qcril.disable_retry=true \
     persist.telephony.oosisdc=false \
+    persist.vendor.radio.mt_sms_ack=30 \
     persist.vendor.radio.rat_on=combine \
     ril.subscription.types=NV,RUIM \
     ro.baseband.arch=msm \
