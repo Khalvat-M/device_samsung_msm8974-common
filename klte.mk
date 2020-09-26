@@ -41,8 +41,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@5.0-impl \
-    android.hardware.audio.effect@5.0-impl \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
     audio_policy.msm8974 \
     audio.a2dp.default \
     audio.primary.msm8974 \
