@@ -54,6 +54,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.renderer=opengl \
     debug.sf.enable_gl_backpressure=1 \
     debug.sf.latch_unsignaled=1 \
+    debug.sf.recomputecrop=0 \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0
 
