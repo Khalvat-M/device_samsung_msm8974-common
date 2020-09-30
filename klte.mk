@@ -308,6 +308,9 @@ PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml
 
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 # TimeKeep
 PRODUCT_PACKAGES += \
     timekeep \
