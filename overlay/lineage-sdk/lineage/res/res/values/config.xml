@@ -82,4 +82,7 @@
     -->
     <integer name="config_deviceSupportsButtonBrightnessControl">1</integer>
 
+    <!-- Button backlight -->
+    <bool name="config_deviceHasVariableButtonBrightness">true</bool>
+
 </resources>
