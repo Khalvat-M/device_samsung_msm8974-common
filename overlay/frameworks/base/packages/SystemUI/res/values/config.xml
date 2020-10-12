@@ -40,7 +40,4 @@
 
     <!-- The CPU temperature sensor path, defaults to empty -->
     <string name="config_cpuTempSensor">/sys/class/thermal/thermal_zone5/temp</string>
-
-    <!-- do not use H265 encoder for screen recordings -->
-    <bool name="config_useNewScreenRecEncoder">false</bool>
 </resources>
