@@ -127,6 +127,9 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/vendor/bin/mm-qcamera-daemon=22 \
     /system/vendor/bin/hw/rild=27
 
+# memfd
+TARGET_HAS_MEMFD_BACKPORT := true
+
 # Offmode Charging
 BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/samsung/klte-common/charger/images
 
