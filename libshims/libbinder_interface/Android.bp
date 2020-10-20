@@ -1,0 +1,16 @@
+cc_library_shared {
+
+    srcs: ["libbinder_interface.cpp"],
+
+    shared_libs: [
+        "libbinder",
+        "libutils",
+    ],
+
+    proprietary: true,
+
+    name: "libshim_binder",
+
+    compile_multilib: "32",
+
+}

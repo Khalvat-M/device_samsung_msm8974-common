@@ -1,0 +1,11 @@
+cc_library_shared {
+
+    srcs: ["camera_shim.c"],
+
+    proprietary: true,
+
+    name: "libshim_camera",
+
+    compile_multilib: "32",
+
+}

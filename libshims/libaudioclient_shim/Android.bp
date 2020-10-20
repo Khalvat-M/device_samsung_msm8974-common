@@ -1,0 +1,15 @@
+cc_library_shared {
+
+    srcs: ["libaudioclient_shim.cpp"],
+
+    shared_libs: [
+        "libaudioclient",
+    ],
+
+    proprietary: true,
+
+    name: "libaudioclient_shim",
+
+    compile_multilib: "32",
+
+}
