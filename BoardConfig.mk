@@ -60,6 +60,7 @@ BOARD_VENDOR := samsung
 
 # Camera
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
+MALLOC_SVELTE_FOR_LIBC32 := true
 
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
