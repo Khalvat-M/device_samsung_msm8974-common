@@ -257,25 +257,6 @@
     <!-- Enable Smart Pixels -->
     <bool name="config_enableSmartPixels">true</bool>
 
-    <!-- Flag specifying whether VoLTE, VT and WFC is available on device -->
-    <bool name="config_device_volte_available">true</bool>
-    <bool name="config_device_vt_available">true</bool>
-    <bool name="config_device_wfc_ims_available">true</bool>
-
-    <!-- Flag specifying whether VoLTE & VT should be available for carrier: independent of
-    carrier provisioning. If false: hard disabled. If true: then depends on carrier
-    provisioning, availability etc -->
-    <bool name="config_carrier_volte_available">true</bool>
-    <bool name="config_carrier_vt_available">true</bool>
-
-    <!-- Max number of scan filters supported by blutooth controller. 0 if the
-         device does not support hardware scan filters-->
-    <integer translatable="false" name="config_bluetooth_max_scan_filters">1</integer>
-
-    <!-- Max number of advertisers supported by bluetooth controller. 0 if the
-         device does not support multiple advertisement-->
-    <integer translatable="false" name="config_bluetooth_max_advertisers">4</integer>
-
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
          Here are a few of them:
@@ -372,6 +353,16 @@
       
     <!-- Enable Doze and App Standby -->
     <bool name="config_enableAutoPowerModes">true</bool>
+
+    <!-- Indicate whether to allow the device to suspend when the screen is off
+         due to the proximity sensor.  This resource should only be set to true
+         if the sensor HAL correctly handles the proximity sensor as a wake-up source.
+         Otherwise, the device may fail to wake out of suspend reliably.
+         The default is false. -->
+    <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
+
+    <!-- Screen off delay -->
+    <integer name="config_screen_off_delay">0</integer>
 
     <!-- AlwaysOnDisplay  -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
