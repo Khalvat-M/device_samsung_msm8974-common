@@ -20,11 +20,9 @@
 
 #define BTM_DEF_LOCAL_NAME   "Samsung Galaxy S5"
 
-#define BTA_DISABLE_DELAY 100 /* in milliseconds */
-#define SC_MODE_INCLUDED FALSE
-#define SDP_DEBUG FALSE
-#define BTSNOOP_MEM FALSE
-#define BTM_WBS_INCLUDED TRUE /* Enable WBS */
-#define BTIF_HF_WBS_PREFERRED FALSE /* Do not prefer WBS */
+
+#define BTA_DISABLE_DELAY 1000 /* in milliseconds */
+#define BTM_WBS_INCLUDED TRUE       /* Enable WBS */
+#define BTIF_HF_WBS_PREFERRED TRUE  /* Use WBS    */
 
 #endif
