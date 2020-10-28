@@ -256,4 +256,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Zygote
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.device_config.runtime_native.usap_pool_enabled=true
+    persist.device_config.runtime_native.usap_pool_enabled=true \
+    zygote.critical_window.minute=10
