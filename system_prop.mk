@@ -154,15 +154,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     iorapd.perfetto.enable=true \
     iorapd.readahead.enable=true
 
-# LMKD
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lmk.critical_upgrade=true \
-    ro.lmk.downgrade_pressure=60 \
-    ro.lmk.kill_heaviest_task=false \
-    ro.lmk.log_stats=true \
-    ro.lmk.upgrade_pressure=40 \
-    ro.lmk.use_psi=false
-
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.am.reschedule_service=true \
