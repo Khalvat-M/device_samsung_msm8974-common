@@ -17,6 +17,7 @@
 <!-- Phone app resources that may need to be customized
      for different hardware or product builds. -->
 <resources>
+
     <!-- This device implements a noise suppression device for in call audio-->
     <bool name="has_in_call_noise_suppression">true</bool>
 

@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-""" Custom OTA commands for klte devices """
+""" Custom OTA commands for samsung_msm8974 devices """
 
 import common
 import re

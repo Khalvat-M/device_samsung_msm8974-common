@@ -16,7 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter klte klteactivexx kltechn kltechnduo klteduos kltedv kltekdi kltekor kltespr kltesprsports klteusc kltevzw,$(TARGET_DEVICE)),)
 ifeq ($(BOARD_VENDOR),samsung)
 ifeq ($(TARGET_BOARD_PLATFORM),msm8974)
 ifeq ($(call is-board-platform-in-list,msm8974),true)
@@ -53,18 +52,6 @@ $(WV_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(WV_SYMLINKS)
 
-DMVERITY_IMAGES := \
-    dmverity.b00 dmverity.b01 dmverity.b02 dmverity.b03 dmverity.mdt
-
-DMVERITY_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(DMVERITY_IMAGES)))
-$(DMVERITY_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "DMVERITY firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(DMVERITY_SYMLINKS)
-
 DTCPIP_IMAGES := \
     dtcpip.b00 dtcpip.b01 dtcpip.b02 dtcpip.b03 dtcpip.mdt
 
@@ -88,18 +75,6 @@ $(DXPRDY_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(DXPRDY_SYMLINKS)
-
-FP_ASM_IMAGES := \
-    fp_asm.b00 fp_asm.b01 fp_asm.b02 fp_asm.b03 fp_asm.mdt
-
-FP_ASM_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(FP_ASM_IMAGES)))
-$(FP_ASM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "FP_ASM firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(FP_ASM_SYMLINKS)
 
 ISDBTMM_IMAGES := \
     isdbtmm.b00 isdbtmm.b01 isdbtmm.b02 isdbtmm.b03 isdbtmm.mdt
@@ -149,30 +124,6 @@ $(SEC_STOR_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(SEC_STOR_SYMLINKS)
 
-SECUREFP_IMAGES := \
-    securefp.b00 securefp.b01 securefp.b02 securefp.b03 securefp.mdt
-
-SECUREFP_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(SECUREFP_IMAGES)))
-$(SECUREFP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "SECUREFP firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(SECUREFP_SYMLINKS)
-
-SKEYMAST_IMAGES := \
-    skeymast.b00 skeymast.b01 skeymast.b02 skeymast.b03 skeymast.mdt
-
-SKEYMAST_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(SKEYMAST_IMAGES)))
-$(SKEYMAST_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "SKEYMAST firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(SKEYMAST_SYMLINKS)
-
 SKM_IMAGES := \
     skm.b00 skm.b01 skm.b02 skm.b03 skm.mdt
 
@@ -209,18 +160,6 @@ $(SSHDCPAP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(SSHDCPAP_SYMLINKS)
 
-T2_IMAGES := \
-    t2_ks_mi.b00 t2_ks_mi.b01 t2_ks_mi.b02 t2_ks_mi.b03 t2_ks_mi.mdt
-
-T2_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(T2_IMAGES)))
-$(T2_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "T2 firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(T2_SYMLINKS)
-
 TBASE_IMAGES := \
     tbase300.b00 tbase300.b01 tbase300.b02 tbase300.b03 tbase300.mdt
 
@@ -247,32 +186,6 @@ $(TIMA_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(TIMA_SYMLINKS)
-
-TZ_IMAGES := \
-    tz_ccm.b00 tz_ccm.b01 tz_ccm.b02 tz_ccm.b03 tz_ccm.mdt \
-    tz_otp.b00 tz_otp.b01 tz_otp.b02 tz_otp.b03 tz_otp.mdt \
-    tz_iccc.b00 tz_iccc.b01 tz_iccc.b02 tz_iccc.b03 tz_iccc.mdt
-
-TZ_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(TZ_IMAGES)))
-$(TZ_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "TZ firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(TZ_SYMLINKS)
-
-TZPR_IMAGES := \
-    tzpr25.b00 tzpr25.b01 tzpr25.b02 tzpr25.b03 tzpr25.mdt
-
-TZPR_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(TZPR_IMAGES)))
-$(TZPR_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "TZPR firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(TZPR_SYMLINKS)
 
 VENUS_IMAGES := \
     venus.b00 venus.b01 venus.b02 venus.b03 venus.b04 venus.mdt
@@ -336,8 +249,7 @@ $(shell mkdir -p $(TARGET_OUT_VENDOR)/etc/firmware/wcd9320; \
 		$(TARGET_OUT_VENDOR)/etc/firmware/wcd9320/wcd9320_mbhc.bin; \
 	ln -sf /data/misc/audio/wcd9320_mad_audio.bin \
 		$(TARGET_OUT_VENDOR)/etc/firmware/wcd9320/wcd9320_mad_audio.bin)
-
-endif
+		
 endif
 endif
 endif

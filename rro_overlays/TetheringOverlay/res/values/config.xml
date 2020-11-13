@@ -19,9 +19,6 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Do not translate. Default access point SSID used for tethering -->
-    <string name="wifi_tether_configure_ssid_default" translatable="false">Galaxy S5</string>
-
     <!-- Use the BPF offload for tethering when the kernel has support. True by default.
          If the device doesn't want to support tether BPF offload, this should be false.
          Note that this setting could be overridden by device config.

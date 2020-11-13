@@ -44,7 +44,6 @@
 /dev/smd7                 0660   bluetooth  bluetooth
 /dev/smd11                0660   radio      radio
 /dev/smd_cxm_qmi          0640   radio      radio
-
 /dev/null                 0666   root       root
 /dev/zero                 0666   root       root
 /dev/full                 0666   root       root
@@ -56,7 +55,6 @@
 /dev/binder               0666   root       root
 
 #permissions for CSVT
-/dev/smd11                0660   radio      radio
 
 /dev/smdcntl0             0640   radio      radio
 /dev/smdcntl1             0640   radio      radio
@@ -148,7 +146,7 @@
 # NFC_NXP
 /dev/pn547                0660   nfc        nfc
 
-# NFC bcm2079x (kltespr, kltedv)
+# NFC bcm2079x (kltespr, kltedv , Ks01lte)
 /dev/bcm2079x             0660   nfc        nfc
 
 # NFC_SLSI

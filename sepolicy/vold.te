@@ -13,3 +13,7 @@ allowxperm vold vold_device:blk_file ioctl BLKROGET;
 
 dontaudit vold hal_bootctl_hwservice:hwservice_manager find;
 
+# Allow loading keymaster firmware
+allow vold firmware_file:dir search;
+allow vold firmware_file:file r_file_perms;
+allow vold firmware_file:lnk_file read;
