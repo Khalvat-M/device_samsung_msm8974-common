@@ -104,6 +104,9 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
 # Legacy memfd
 TARGET_HAS_MEMFD_BACKPORT := true
 
+# LMKD stats logging
+TARGET_LMKD_STATS_LOG := true
+
 # Manifests
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
