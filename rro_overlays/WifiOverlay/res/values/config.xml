@@ -30,6 +30,9 @@
     <!-- True if the firmware supports connected MAC randomization -->
     <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
 
+    <!-- Enable WPA2 to WPA3 auto-upgrade -->
+    <bool translatable="false" name="config_wifiSaeUpgradeEnabled">false</bool>
+
     <string name="roamingText3">Network Extender</string>
 
 </resources>
