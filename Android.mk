@@ -240,15 +240,6 @@ $(MODEM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /firmware-modem/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(MODEM_SYMLINKS)
-
-# Create links for audcal data files
-$(shell mkdir -p $(TARGET_OUT_VENDOR)/etc/firmware/wcd9320; \
-	ln -sf /data/misc/audio/wcd9320_anc.bin \
-		$(TARGET_OUT_VENDOR)/etc/firmware/wcd9320/wcd9320_anc.bin;\
-	ln -sf /data/misc/audio/mbhc.bin \
-		$(TARGET_OUT_VENDOR)/etc/firmware/wcd9320/wcd9320_mbhc.bin; \
-	ln -sf /data/misc/audio/wcd9320_mad_audio.bin \
-		$(TARGET_OUT_VENDOR)/etc/firmware/wcd9320/wcd9320_mad_audio.bin)
 		
 endif
 endif
