@@ -66,7 +66,14 @@ ifeq ($(HOST_OS),linux)
     WITH_DEXPREOPT := true
   endif
 endif
+
+# DexPreopt debug info
 WITH_DEXPREOPT_DEBUG_INFO := false
+USE_DEX2OAT_DEBUG := false
+
+# Don't build debug for host or device
+ART_BUILD_TARGET_DEBUG := false
+ART_BUILD_HOST_DEBUG := false
 
 # Display
 TARGET_USES_ION := true
