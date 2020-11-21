@@ -12,22 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
+COMMON_PATH := device/samsung/msm8974-common
 
 # Android Platform
 TARGET_BOARD_PLATFORM := msm8974
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 
-COMMON_PATH := device/samsung/msm8974-common
-
 # Architecture
 TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
-TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := generic
-TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 TARGET_CPU_VARIANT_RUNTIME := krait
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -50,17 +48,16 @@ USE_XML_AUDIO_POLICY_CONF := 1
 TARGET_USES_64_BIT_BINDER := true
 
 # Bluetooth
-BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Bootloader
-TARGET_NO_BOOTLOADER := true
-TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 BOARD_VENDOR := samsung
+TARGET_BOOTLOADER_BOARD_NAME := MSM8974
+TARGET_NO_BOOTLOADER := true
 
 # Camera
-TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 MALLOC_SVELTE_FOR_LIBC32 := true
+TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
@@ -72,29 +69,31 @@ endif
 WITH_DEXPREOPT_DEBUG_INFO := false
 
 # Display
-TARGET_USES_C2D_COMPOSITION := true
-TARGET_USES_ION := true
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
-TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x02000000U
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x02000000U
 TARGET_SCREEN_DENSITY := 480
+TARGET_USES_C2D_COMPOSITION := true
+TARGET_USES_ION := true
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Filesystem
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_ROOT_EXTRA_FOLDERS := firmware firmware-modem efs
+BOARD_ROOT_EXTRA_SYMLINKS := /data/tombstones:/tombstones
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
-
-# HIDL
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
-PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 
 # Includes
 TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 
 # Kernel
+BOARD_CUSTOM_BOOTIMG := true
+BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 zcache.enabled=1 zcache.compressor=lz4
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
@@ -102,10 +101,7 @@ BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
-BOARD_CUSTOM_BOOTIMG := true
-BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8974
-
 
 # Legacy BLOB Support
 TARGET_LD_SHIM_LIBS += \
@@ -119,29 +115,28 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/vendor/bin/mm-qcamera-daemon=22 \
     /system/vendor/bin/hw/rild=27
 
-
-# memfd
+# Legacy memfd
 TARGET_HAS_MEMFD_BACKPORT := true
+
+# Manifests
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
+PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
 
 # Memory configuration
 MALLOC_SVELTE := true
 
-# Netd
+# Network Routing
 TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true
 
 # Offmode Charging
-BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/samsung/msm8974-common/charger/images
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := $(COMMON_PATH)/charger/images
 
 # Partitions
-BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 20971520	  #20mb
 BOARD_CACHEIMAGE_PARTITION_SIZE := 314572800	  #300mb
+BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 20971520	  #20mb
-BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
-BOARD_ROOT_EXTRA_FOLDERS := firmware firmware-modem efs
-BOARD_ROOT_EXTRA_SYMLINKS := /data/tombstones:/tombstones
 
 # Power HAL
 TARGET_USES_INTERACTION_BOOST := true
@@ -150,18 +145,15 @@ TARGET_USES_INTERACTION_BOOST := true
 BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
+ifneq ($(WITH_TWRP),true)
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
-TARGET_RECOVERY_DEVICE_DIRS += device/samsung/msm8974-common
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_RECOVERY_DENSITY := xhdpi
-TARGET_RECOVERY_SKIP_EV_REL_INPUT := true
+endif
 BOARD_RAMDISK_USE_XZ := true
 BOARD_HAS_DOWNLOAD_MODE := true
-BOARD_USES_MMCUTILS := true
-BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_HAS_NO_MISC_PARTITION := true
-BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_RECOVERY_SWIPE := true
+TARGET_RECOVERY_DEVICE_DIRS += $(COMMON_PATH)
+TARGET_RECOVERY_DENSITY := xhdpi
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TARGET_RECOVERY_SKIP_EV_REL_INPUT := true
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
@@ -175,12 +167,10 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
 # TWRP Support - Optional
+# export WITH_TWRP=true
 ifeq ($(WITH_TWRP),true)
 -include $(COMMON_PATH)/twrp.mk
 endif
-
-# Use mke2fs to create ext4 images
-TARGET_USES_MKE2FS := true
 
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI := true

@@ -15,16 +15,10 @@
 #
 
 LOCAL_PATH := $(call my-dir)
-
-ifeq ($(BOARD_VENDOR),samsung)
 ifeq ($(TARGET_BOARD_PLATFORM),msm8974)
-ifeq ($(call is-board-platform-in-list,msm8974),true)
 
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
 include $(call all-makefiles-under,$(LOCAL_PATH))
-
 include $(CLEAR_VARS)
-
 
 # (SYMLINK FOR FIRMWARE/IMAGE)
 ACTLOCK_IMAGES := \
@@ -199,7 +193,6 @@ $(VENUS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(VENUS_SYMLINKS)
 
-
 # (SYMLINK FOR FIRMWARE-MODEM/IMAGE)
 ADSP_IMAGES := \
     adsp.b00 adsp.b01 adsp.b02 adsp.b03 adsp.b04 adsp.b05 adsp.b06 \
@@ -240,7 +233,5 @@ $(MODEM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /firmware-modem/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(MODEM_SYMLINKS)
-		
-endif
-endif
+
 endif

@@ -45,7 +45,6 @@ on init
 
 on fs
     mount_all /vendor/etc/fstab.qcom
-    swapon_all /vendor/etc/fstab.qcom
 
     exec u:r:vendor_toolbox:s0 -- /vendor/bin/toybox_vendor find /efs -type d \
          -exec /vendor/bin/toybox_vendor setfattr -x security.sehash {} \;
@@ -69,8 +68,6 @@ on post-fs
     chmod 0664 /sys/block/mmcblk0/bkops_en
 
 on post-fs-data
-    mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
-
     # Create the directories used by the Wireless subsystem
     mkdir /data/vendor/wifi 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
@@ -133,7 +130,7 @@ on post-fs-data
     chown system system /sys/devices/virtual/mdnie/mdnie/outdoor
     chown system system /sys/devices/virtual/mdnie/mdnie/scenario
 
-    #Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
+    # Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
     mkdir /data/system 0775 system system
 
     # Create tombstones
@@ -160,7 +157,7 @@ on post-fs-data
     chown radio system /efs/prov/libdevkm.lock
     chmod 0660 /efs/prov/libdevkm.lock
 
-    #OTG Test
+    # OTG Test
     chown system radio /sys/class/host_notify/usb_otg/booster
     chmod 0660 /sys/class/host_notify/usb_otg/booster
 
@@ -218,13 +215,13 @@ on early-boot
     chown radio system /efs/bluetooth
     chmod 0775 /efs/bluetooth
 
-    #Create directories for Location services
+    # Create directories for Location services
     mkdir /data/misc/location 0770 gps gps
     mkdir /data/misc/location/mq 0770 gps gps
     mkdir /data/misc/location/xtwifi 0770 gps gps
     mkdir /data/misc/location/gpsone_d 0770 system gps
 
-    #Create QMUX deamon socket area
+    # Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 2770 radio radio
     mkdir /dev/socket/qmux_audio 2770 media audio
     mkdir /dev/socket/qmux_bluetooth 2770 bluetooth bluetooth
@@ -274,7 +271,7 @@ on early-boot
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth
     # but only if ro.data.large_tcp_window_size property is set.
 on property:ro.data.large_tcp_window_size=true
-    write /proc/sys/net/ipv4/tcp_adv_win_scale  2
+    write /proc/sys/net/ipv4/tcp_adv_win_scale 2
 
     # Flash storage isn't a good entropy source, and only causes locking
     # overhead in the kernel. Turn it off.
@@ -403,7 +400,6 @@ on property:ro.data.large_tcp_window_size=true
     chown system system /sys/class/backlight/panel/auto_brightness
     chmod 0664 /sys/class/backlight/panel/auto_brightness
 
-
     chown system system /sys/class/leds/keyboard-backlight/brightness
     chown system system /sys/class/leds/lcd-backlight/brightness
     chown system system /sys/class/leds/button-backlight/brightness
@@ -426,10 +422,6 @@ on property:ro.data.large_tcp_window_size=true
     # Adjust YUV to RGB Conversion(CSC_Conversion)
     chown system media_rw /sys/class/graphics/fb0/csc_cfg
     chmod 0660 /sys/class/graphics/fb0/csc_cfg
-
-    #Essential node for usbservice
-    mkdir /dev/bus/ 0755 root root
-    mkdir /dev/bus/usb 0755 root root
 
     # Permissions for InputDevices.
     chown system radio /sys/class/sec/tsp/cmd
@@ -635,8 +627,8 @@ on property:ro.data.large_tcp_window_size=true
 
     # Assign TCP buffer thresholds to be ceiling value of technology maximums
     # Increased technology maximums should be reflected here.
-    write /proc/sys/net/core/rmem_max  8388608
-    write /proc/sys/net/core/wmem_max  8388608
+    write /proc/sys/net/core/rmem_max 8388608
+    write /proc/sys/net/core/wmem_max 8388608
 
     # Vibrator
     chmod 0660 /sys/class/timed_output/vibrator/pwm_value
@@ -664,13 +656,11 @@ on property:ro.data.large_tcp_window_size=true
     chown system radio /sys/class/sec/sec_touchkey/1mm_mode
     chown system radio /sys/class/sec/sec_touchkey/boost_level
 
-    #Bluetooth UART dev
+    # Bluetooth UART dev
     chown bluetooth bluetooth /sys/devices/f995e000.uart/clock
     chmod 0660 /sys/devices/f995e000.uart/clock
 
     # permissions for bluetooth.
-    setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
-    chown bluetooth bluetooth ro.bt.bdaddr_path
     chown radio bluetooth /efs/bluetooth/bt_addr
     chmod 0640 /efs/bluetooth/bt_addr
     restorecon_recursive /efs/bluetooth
@@ -707,11 +697,9 @@ on property:ro.data.large_tcp_window_size=true
     chown wifi wifi /sys/module/dhd/parameters/firmware_path
     chown wifi wifi /sys/module/dhd/parameters/nvram_path
 
-
     setprop init.svc.console stopped
-    
-# Services begin here
 
+# Services begin here
 service adsprpcd /vendor/bin/adsprpcd
     class main
     user media
@@ -734,11 +722,11 @@ service mpdecision /vendor/bin/mpdecision --avg_comp
     disabled
 
 service thermal-engine /vendor/bin/thermal-engine
-   class main
-   user root
-   socket thermal-send-client stream 0666 system system
-   socket thermal-recv-client stream 0660 system system
-   socket thermal-recv-passive-client stream 0666 system system
+    class main
+    user root
+    socket thermal-send-client stream 0666 system system
+    socket thermal-recv-client stream 0660 system system
+    socket thermal-recv-passive-client stream 0666 system system
    group system root
 
 service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
@@ -862,6 +850,9 @@ on property:sys.boot_completed=1
     symlink /data/user_de/0/com.android.providers.telephony/shared_prefs /data/data/com.android.providers.telephony/shared_prefs
     restorecon /data/data/com.android.providers.telephony/databases
     restorecon /data/data/com.android.providers.telephony/shared_prefs
+
+    # Enable ZRAM on boot_complete
+    swapon_all /vendor/etc/fstab.qcom
 
 service charger /system/bin/charger
     class charger

@@ -46,9 +46,6 @@
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
 
-    <!-- Default color for notification LED is white. -->
-    <color name="config_defaultNotificationColor">#ffffffff</color>
-
     <!-- Default value for led color when battery is medium charged -->
     <!-- The green LED is brighter than red, bias closer to yellow. -->
     <integer name="config_notificationsBatteryMediumARGB">0xFFFF6000</integer>
@@ -181,10 +178,7 @@
     <integer name="config_deviceHardwareKeys">83</integer>
 
     <!-- Button Backlight -->
-    <bool name="config_button_brightness_support">true</bool> 
-     
-    <!-- Support double tap to wake -->
-    <bool name="config_supportDoubleTapWake">true</bool>
+    <bool name="config_button_brightness_support">true</bool>
 
     <!-- Doze: should the TYPE_PICK_UP_GESTURE sensor be used as a pulse signal. -->
     <bool name="config_dozePulsePickup">true</bool>
@@ -195,7 +189,7 @@
          The duplication is necessary, because this information is used before the features are
          available to the system.-->
     <bool name="config_freeformWindowManagement">true</bool>
-     
+
     <!-- Enable home button wake  -->
     <bool name="config_HomeWakeButton">true</bool>
     <integer name="config_deviceHardwareWakeKeys">65</integer>
