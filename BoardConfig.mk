@@ -106,7 +106,7 @@ TARGET_KERNEL_SOURCE := kernel/samsung/msm8974
 TARGET_LD_SHIM_LIBS += \
     /system/vendor/lib/hw/camera.vendor.msm8974.so|libshim_camera.so \
     /system/vendor/lib/libperipheral_client.so|libshim_binder.so \
-    /system/vendor/lib/libril-qc-qmi-1.so|libaudioclient_shim.so \
+    /system/vendor/lib/libril-qc-qmi-1.so|libril_shim.so \
     /system/vendor/lib/mediadrm/libwvdrmengine.so|libprotobuf_shim.so
 
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
