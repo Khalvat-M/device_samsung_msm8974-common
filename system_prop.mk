@@ -112,6 +112,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.telephony.oosisdc=false \
     persist.qcril.disable_retry=true
 
+# Recovery
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.recovery.skip_ev_rel_input=true
+
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sensors=1
