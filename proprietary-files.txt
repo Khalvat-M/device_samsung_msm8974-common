@@ -70,5 +70,9 @@ vendor/lib/libstlport.so|0be0a0d13e12fbf95d97d309dcbc25d3f969a469
 # Time services (Samsung klte - G900FXXU1CSA1_G900FVIA1CSC1_VIA)
 vendor/lib/libtime_genoff.so|13eccbbd1fdbd8474247ed6552e3b31507636531
 
+# VNDK
+vendor/lib/libcutils-v29.so
+vendor/lib/libprotobuf-cpp-lite-v29.so
+
 # Widevine (Google angler - OPR6.170623.017)
 vendor/lib/mediadrm/libwvdrmengine.so|2f70d96729bc35389d98ab3a1e8f48f4f7b659c2
