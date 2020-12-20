@@ -735,7 +735,7 @@ service media /system/bin/mediaserver
     ioprio rt 4
 
 service vendor.qcamerasvr /vendor/bin/mm-qcamera-daemon
-    class main
+    class early_hal
     user camera
     group camera system inet input graphics bluetooth
 
