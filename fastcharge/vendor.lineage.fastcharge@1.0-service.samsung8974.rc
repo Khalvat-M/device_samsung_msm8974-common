@@ -1,0 +1,8 @@
+on init
+    chown system radio /sys/kernel/fast_charge/force_fast_charge
+
+service vendor.fastcharge-hal-1-0 /vendor/bin/hw/vendor.lineage.fastcharge@1.0-service.samsung8974
+    interface vendor.lineage.fastcharge@1.0::IFastCharge default
+    class hal
+    user system
+    group system
