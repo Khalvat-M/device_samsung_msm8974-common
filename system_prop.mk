@@ -114,6 +114,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Recovery
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.recovery_update=false \
     ro.recovery.skip_ev_rel_input=true
 
 # Sensors
