@@ -45,6 +45,7 @@ cc_library_shared {
 
 cc_binary {
     name: "android.hardware.sensors@1.0-service.samsung8974",
+    vintf_fragments: ["android.hardware.sensors@1.0-service.samsung8974.xml"],
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     vendor: true,
