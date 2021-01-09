@@ -71,6 +71,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.samsung-qcom    u:object_r:hal_lineage_livedisplay_sysfs_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.samsung               u:object_r:hal_lineage_touch_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.samsung   	  u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.3-service\.clearkey              u:object_r:hal_drm_clearkey_exec:s0
 
 # firmware
 /system/vendor/firmware/bcm(.*).hcd                     u:object_r:bt_fw_file:s0
@@ -79,6 +80,7 @@
 
 # sockets
 /data/cam_socket3                                       u:object_r:camera_socket:s0
+/data/vendor/mediadrm(/.*)?                             u:object_r:mediadrm_vendor_data_file:s0
 
 # sysfs
 /sys/devices/[a-f0-9]+\.uart(/.*)?                               u:object_r:sysfs_msmuart_file:s0
