@@ -10,15 +10,10 @@ allow system_server {
 
 allow system_server proc_last_kmsg:file r_file_perms;
 
+allow system_server sensor_efs_file:file rw_file_perms;
+allow system_server vendor_file:file execmod;
+allow system_server sysfs_sec_ir:file w_file_perms;
+
 get_prop(system_server, exported_camera_prop);
 get_prop(system_server, userspace_reboot_config_prop);
 get_prop(system_server, userspace_reboot_exported_prop);
-
-allow system_server app_zygote:process { getpgid };
-
-# Smart charger
-allow system_server sysfs_battery_supply:file rw_file_perms;
-
-allow system_server unlabeled:file unlink;
-allow system_server vendor_init:fd use;
-allow system_server vendor_init:fifo_file rw_file_perms;

@@ -35,5 +35,7 @@ allow hal_sensors_default {
 
 allow hal_sensors_default sensor_efs_file:file rw_file_perms;
 
-# /system/vendor/lib/libsensirion_ks01_eur.so
+# /system/vendor/lib/libsensirion_ks01.so
 allow hal_sensors_default vendor_sensor_lib_file:file execmod;
+allow hal_sensors_default hal_data_file:dir rw_dir_perms;
+allow hal_sensors_default hal_data_file:file rw_file_perms;

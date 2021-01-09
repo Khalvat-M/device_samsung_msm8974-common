@@ -1,9 +1,12 @@
 # data files
 /data/validity(/.*)?                                    u:object_r:vfsspi_data_file:s0
+/data/system/yas(.*)                                    u:object_r:hal_data_file:s0
+/data/system/sensor_service/hmac_key                    u:object_r:sensor_data_file:s0
 
 # device nodes
 /dev/ttyHS3                                             u:object_r:audio_device:s0
 /dev/vfsspi                                             u:object_r:vfsspi_device:s0
+/dev/ssp_sensorhub                                      u:object_r:sensors_device:s0
 
 # efs files
 /efs/FactoryApp(/.*)?                                   u:object_r:app_efs_file:s0
@@ -15,9 +18,9 @@
 /efs/imei(/.*)?                                         u:object_r:imei_efs_file:s0
 /efs/wifi(/.*)?                                         u:object_r:wifi_efs_file:s0
 
-
 # sysfs
 /sys/devices(/.*)?/input/input[1-2]/enabled             u:object_r:sysfs_hal_pwr:s0
+/sys/devices/virtual/sec/sec_touchkey/keypad_enable     u:object_r:sysfs_sec_touchkey:s0
 
 # sysfs - audio
 /sys/devices/[a-f0-9]+\.slim/es705-codec-gen0(/.*)?     u:object_r:sysfs_audio:s0
@@ -26,6 +29,8 @@
 # sysfs - fingerprint
 /sys/devices/virtual/fingerprint(/.*)?                  u:object_r:sysfs_fingerprint:s0
 
+# Sensor Library
+/(vendor|system/vendor)/lib/libsensirion_ks01_eur.so         u:object_r:vendor_sensor_lib_file:s0
 
 # block devices
 /dev/block/platform/msm_sdcc\.1/by-name/efs             u:object_r:efs_block_device:s0
@@ -59,7 +64,6 @@
 /dev/stune(/.*)?     u:object_r:cgroup:s0
 
 # executeables
-/system/bin/clean_scratch_files                         u:object_r:clean_scratch_files_exec:s0
 /system/vendor/bin/macloader                            u:object_r:macloader_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software       u:object_r:hal_gatekeeper_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.samsung                u:object_r:hal_ir_default_exec:s0
@@ -72,9 +76,6 @@
 /system/vendor/firmware/bcm(.*).hcd                     u:object_r:bt_fw_file:s0
 /system/vendor/firmware/bcm2079x(.*).ncd                u:object_r:nfc_fw_file:s0
 /system/vendor/firmware/libpn547_fw.so                  u:object_r:nfc_fw_file:s0
-
-# Sensor Library
-/(vendor|system/vendor)/lib/libsensirion_ks01_eur.so    u:object_r:vendor_sensor_lib_file:s0
 
 # sockets
 /data/cam_socket3                                       u:object_r:camera_socket:s0
