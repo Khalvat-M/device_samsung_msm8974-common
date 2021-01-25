@@ -16,4 +16,3 @@
 
 # NFC
 BOARD_NFC_HAL_SUFFIX := msm8974
-include $(COMMON_PATH)/nfc/board.mk
