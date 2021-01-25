@@ -99,8 +99,7 @@ TARGET_LD_SHIM_LIBS += \
 
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/bin/mediaserver=22 \
-    /system/vendor/bin/mm-qcamera-daemon=22 \
-    /system/vendor/bin/hw/rild=27
+    /system/vendor/bin/mm-qcamera-daemon=22
 
 # Legacy memfd
 TARGET_HAS_MEMFD_BACKPORT := true
@@ -147,10 +146,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private 
-    
-# Sensors
-TARGET_NO_SENSOR_PERMISSION_CHECK := true
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 
 # TWRP Support - Optional
 # export WITH_TWRP=true
