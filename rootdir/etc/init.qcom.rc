@@ -364,13 +364,21 @@ on early-boot
 
     # Creat topology
     mkdir /sys/devices/system/cpu/cpu0/topology
+    chown system system /sys/devices/system/cpu/cpu0/topology
     mkdir /sys/devices/system/cpu/cpu0/cpufreq
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq
     mkdir /sys/devices/system/cpu/cpu1/topology
+    chown system system /sys/devices/system/cpu/cpu1/topology
     mkdir /sys/devices/system/cpu/cpu1/cpufreq
+    chown system system /sys/devices/system/cpu/cpu1/cpufreq
     mkdir /sys/devices/system/cpu/cpu2/topology
+    chown system system /sys/devices/system/cpu/cpu2/topology
     mkdir /sys/devices/system/cpu/cpu2/cpufreq
+    chown system system /sys/devices/system/cpu/cpu2/cpufreq
     mkdir /sys/devices/system/cpu/cpu3/topology
+    chown system system /sys/devices/system/cpu/cpu3/topology
     mkdir /sys/devices/system/cpu/cpu3/cpufreq
+    chown system system /sys/devices/system/cpu/cpu3/cpufreq
 
     # Assume SMP uses shared cpufreq policy for all CPUs
     chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
@@ -678,6 +686,12 @@ on early-boot
     chown bluetooth bluetooth /proc/bluetooth/sleep/proto
     chmod 0660 /proc/bluetooth/sleep/proto
     chown system system /sys/module/sco/parameters/disable_esco
+
+    #MPTCL
+    mkdir /sys/kernel/debug/tracing/instances/wifi/free_buffer
+    chown system system /sys/kernel/debug/tracing/instances/wifi/free_buffer
+    mkdir /sys/kernel/debug/tracing/instances/wifi/tracing_on
+    chown system system /sys/kernel/debug/tracing/instances/wifi/tracing_on
 
     # DualWave
     chown system system /sys/kernel/DualWave/sound/DUALWAVE_CONFIG
