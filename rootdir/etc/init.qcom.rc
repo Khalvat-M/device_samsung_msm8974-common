@@ -742,7 +742,7 @@ service media /system/bin/mediaserver
     ioprio rt 4
 
 service vendor.qcamerasvr /vendor/bin/mm-qcamera-daemon
-    class late_start
+    class main
     user camera
     group camera system inet input graphics
 
