@@ -19,6 +19,22 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/lib/mediadrm/libwvdrmengine.so)
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
+            ;;
+        vendor/bin/thermal-engine)
+            sed -i 's|/system/etc|/vendor/etc|g' "${2}"
+            ;;
+        vendor/lib/libmmcamera2_sensor_modules.so)
+            sed -i 's|system/etc|vendor/etc|g;
+                    s|/system/lib|/vendor/lib|g;
+                    s|/system/cameradata|/vendor/cameradata|g' "${2}"
+            ;;         
+    esac
+}
+
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 
