@@ -232,6 +232,7 @@ PRODUCT_PACKAGES += \
 
 # Radio
 PRODUCT_PACKAGES += \
+    CarrierConfigOverlay \
     libsecnativefeature \
     libcnefeatureconfig \
     libril_shim \
