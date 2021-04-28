@@ -50,8 +50,7 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     libqcomvisualizer \
     libqcompostprocbundle \
-    libqcomvoiceprocessing \
-    tinymix
+    libqcomvoiceprocessing
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
@@ -139,13 +138,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service \
     android.hardware.health@2.1-impl.recovery
-
-# HIDL
-PRODUCT_PACKAGES += \
-    libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
 
 # IR Blaster
 PRODUCT_PACKAGES += \
@@ -281,20 +273,8 @@ PRODUCT_SHIPPING_API_LEVEL := 18
 # Speed profile services and wifi-service to reduce RAM and storage.
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
-# Telephony
-PRODUCT_PACKAGES += \
-    telephony-ext \
-    telephony-common \
-    qti-telephony-common \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
-    qti-telephony-utils \
-    qti_telephony_utils.xml \
-    ims-ext-common \
-    ims_ext_common.xml
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+# The target has no boot jars to check
+SKIP_BOOT_JARS_CHECK := true
 
 # TimeKeep
 PRODUCT_PACKAGES += \
