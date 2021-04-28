@@ -71,8 +71,11 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.device@3.5 \
     android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.5 \
     camera.device@1.0-impl \
+    camera.device@3.2-impl \
     camera.msm8974 \
     libshim_binder \
     libshim_camera \
