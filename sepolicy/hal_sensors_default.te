@@ -33,6 +33,10 @@ allow hal_sensors_default {
     sysfs_input
 }:lnk_file read;
 
+allow hal_sensors_default firmware_file:dir search;
+allow hal_sensors_default firmware_file:dir rw_file_perms;
+allow hal_sensors_default firmware_file:file create_file_perms;
+allow hal_sensors_default unlabeled:file w_file_perms;
 allow hal_sensors_default sensor_efs_file:file rw_file_perms;
 
 # /system/vendor/lib/libsensirion_ks01.so

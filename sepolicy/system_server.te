@@ -13,6 +13,7 @@ allow system_server proc_last_kmsg:file r_file_perms;
 allow system_server sensor_efs_file:file rw_file_perms;
 allow system_server vendor_file:file execmod;
 allow system_server sysfs_sec_ir:file w_file_perms;
+allow system_server app_zygote:process {  getpgid  };
 
 get_prop(system_server, exported_camera_prop);
 get_prop(system_server, userspace_reboot_config_prop);
