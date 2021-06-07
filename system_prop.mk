@@ -142,6 +142,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
+# System
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vndk.version=current
+
 # Tethering
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
