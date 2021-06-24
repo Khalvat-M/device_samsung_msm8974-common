@@ -147,7 +147,7 @@ PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 # TWRP Support - Optional
 # export WITH_TWRP=true
 ifeq ($(WITH_TWRP),true)
--include $(COMMON_PATH)/twrp.mk
+include $(COMMON_PATH)/twrp.mk
 endif
 
 # Wifi
@@ -167,4 +167,4 @@ WIFI_DRIVER_FW_PATH_STA     := "/vendor/etc/wifi/bcmdhd_sta.bin"
 WIFI_DRIVER_FW_PATH_AP      := "/vendor/etc/wifi/bcmdhd_apsta.bin"
 
 # inherit from the proprietary version
--include vendor/samsung/msm8974-common/BoardConfigVendor.mk
+include vendor/samsung/msm8974-common/BoardConfigVendor.mk
