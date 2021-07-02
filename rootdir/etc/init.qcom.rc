@@ -739,6 +739,15 @@ service media /system/bin/mediaserver
     group audio camera inet net_bt net_bt_admin net_bw_acct drmrpc mediadrm
     ioprio rt 4
 
+service vold /system/bin/vold \
+        --blkid_context=u:r:blkid:s0 --blkid_untrusted_context=u:r:blkid_untrusted:s0 \
+        --fsck_context=u:r:fsck:s0 --fsck_untrusted_context=u:r:fsck_untrusted:s0
+    class core
+    socket vold stream 0660 root mount
+    socket cryptd stream 0660 root mount
+    ioprio be 2
+    writepid /dev/cpuset/foreground/tasks
+
 service vendor.qcamerasvr /vendor/bin/mm-qcamera-daemon
     class early_hal
     user camera
