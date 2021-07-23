@@ -23,6 +23,8 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    device/samsung/msm8974-common/overlay/hardware/samsung/AdvancedDisplay
 
 # AAPT Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
