@@ -758,10 +758,7 @@ service vendor.mpdecision /vendor/bin/mpdecision --avg_comp
 service vendor.thermal-engine /vendor/bin/thermal-engine
     class main
     user root
-    socket thermal-send-client stream 0666 system system
-    socket thermal-recv-client stream 0660 system system
-    socket thermal-recv-passive-client stream 0666 system system
-   group system root
+    group root
 
 service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class main
