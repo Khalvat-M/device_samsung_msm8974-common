@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,3 +16,6 @@
 
 # PN547 specific flags
 BOARD_NFC_CHIPSET := pn547
+
+# NFC
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/nfc/pn547/manifest.xml
