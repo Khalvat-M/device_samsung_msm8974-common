@@ -23,8 +23,6 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    device/samsung/msm8974-common/overlay/hardware/samsung/AdvancedDisplay
 
 # AAPT Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
@@ -34,10 +32,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
-
-# Advanced Display
-PRODUCT_PACKAGES += \
-    AdvancedDisplay
 
 # APEX
 PRODUCT_COPY_FILES += \
