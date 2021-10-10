@@ -42,6 +42,7 @@ on early-init
 
 on init
     write /proc/sys/vm/page-cluster 0
+    chown system system /sys/class/sec/sec_touchkey/keypad_enable
 
     # Setup all the sub-system as related
     write /sys/bus/msm_subsys/devices/subsys0/restart_level RELATED
