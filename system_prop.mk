@@ -25,6 +25,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.bt.enableAptXHD=true \
     persist.service.btui.use_aptx=1
     
+# BPF
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.kernel.ebpf.supported=false
+    
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
