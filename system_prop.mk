@@ -207,6 +207,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sensors=1
 
+# Skia
+# (b/183612348): Enable skia reduceOpsTaskSplitting
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    renderthread.skia.reduceopstasksplitting=true
+
 # SoC
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=Qualcomm \
