@@ -725,7 +725,7 @@ on early-boot
     chown wifi wifi /sys/module/dhd/parameters/firmware_path
     chown wifi wifi /sys/module/dhd/parameters/nvram_path
 
-    setprop init.svc.console stopped
+    stop console
 
 # Services begin here
 service vendor.adsprpcd /vendor/bin/adsprpcd
