@@ -4,3 +4,6 @@ service.camera.hdmi_preview                      u:object_r:camera_prop:s0
 
 # Fastcharge
 persist.vendor.sec.fastchg_enabled               u:object_r:sec_fastcharge_prop:s0
+
+# Hardware
+ro.hardware.chipname                             u:object_r:exported_default_prop:s0
