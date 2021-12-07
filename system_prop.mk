@@ -60,7 +60,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_buffer_age=false \
     debug.hwui.renderer=opengl \
     debug.renderengine.backend=threaded \
-    debug.sf.disable_backpressure=1 \
     debug.sf.latch_unsignaled=1 \
     debug.sf.recomputecrop=0 \
     persist.debug.wfd.enable=1 \
