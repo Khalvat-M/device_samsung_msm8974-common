@@ -113,6 +113,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.qmi.adb_logmask=0 \
     persist.qcril.disable_retry=true \
     persist.telephony.oosisdc=false \
+    persist.vendor.radio.rat_on=combine \
     ril.subscription.types=NV,RUIM \
     ro.baseband.arch=msm \
     ro.data.large_tcp_window_size=true \
@@ -121,7 +122,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.telephony.mqanelements=5 \
     ro.telephony.default_network=9 \
     ro.telephony.call_ring.multiple=0 \
-    ro.use_data_netmgrd=true \
+    ro.vendor.use_data_netmgrd=true \
     telephony.lteOnGsmDevice=1 \
     vendor.rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 
