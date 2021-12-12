@@ -1,3 +1,6 @@
+# talk to bootloader HAL
+hal_client_domain(vold, hal_bootctl)
+
 allow vold efs_file:dir rw_dir_perms;
 allow vold efs_file:file create;
 
@@ -13,8 +16,6 @@ allow vold {
 
 allowxperm vold vold_device:blk_file ioctl 0x1271;
 allowxperm vold vold_device:blk_file ioctl BLKROGET;
-
-dontaudit vold hal_bootctl_hwservice:hwservice_manager find;
 
 # Allow loading keymaster firmware
 allow vold firmware_file:dir search;
