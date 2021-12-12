@@ -44,10 +44,13 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8974 \
     audio.r_submix.default \
     audio.usb.default \
+    libaacwrapper \
     libaudio-resampler \
+    libautohal \
     libqcomvisualizer \
     libqcompostprocbundle \
-    libqcomvoiceprocessing
+    libqcomvoiceprocessing \
+    libvolumelistener
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
