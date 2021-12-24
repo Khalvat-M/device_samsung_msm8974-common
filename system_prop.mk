@@ -1,5 +1,7 @@
 # Art
 PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-cpu-set=0,1,2,3 \
+    dalvik.vm.dex2oat-threads=4 \
     dalvik.vm.dex2oat-filter=speed \
     dalvik.vm.dex2oat-swap=false
 
