@@ -17,6 +17,8 @@ COMMON_PATH := device/samsung/msm8974-common
 # Android Platform
 TARGET_BOARD_PLATFORM := msm8974
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
