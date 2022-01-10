@@ -109,12 +109,7 @@ PRODUCT_PACKAGES += \
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
-  
-# Filesystem tools
-PRODUCT_PACKAGES += \
-    e2fsck_static \
-    resize2fs_static
-  
+ 
 # FlipFlap
 PRODUCT_PACKAGES += \
     FlipFlap

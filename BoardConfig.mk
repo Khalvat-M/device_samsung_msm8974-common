@@ -134,9 +134,6 @@ TARGET_RECOVERY_DEVICE_DIRS += $(COMMON_PATH)
 TARGET_RECOVERY_DENSITY := xhdpi
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
-
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
