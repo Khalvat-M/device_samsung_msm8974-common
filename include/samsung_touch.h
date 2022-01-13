@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The LineageOS Project
+ * Copyright (C) 2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,8 +14,7 @@
  * limitations under the License.
  */
 
-#ifndef SAMSUNG_TOUCH_H
-#define SAMSUNG_TOUCH_H
+#pragma once
 
 /*
  * Board specific nodes
@@ -35,5 +34,3 @@
 
 //For TouchscreenGesture
 #define TOUCHSCREEN_GESTURE_NODE "/sys/class/sec/sec_epen/epen_gestures"
-
-#endif  // SAMSUNG_TOUCH_H

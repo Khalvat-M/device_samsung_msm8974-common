@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The LineageOS Project
+ * Copyright (C) 2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,8 +14,7 @@
  * limitations under the License.
  */
 
-#ifndef SAMSUNG_MACLOADER_H
-#define SAMSUNG_MACLOADER_H
+#pragma once
 
 /*
  * Board specific nodes
@@ -36,5 +35,3 @@
 
 /* Consumer identification number (CID) */
 #define CID_PATH "/data/.cid.info"
-
-#endif // SAMSUNG_MACLOADER_H
