@@ -139,7 +139,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
-PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private 
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private 
 
 # TWRP Support - Optional
 # export WITH_TWRP=true
