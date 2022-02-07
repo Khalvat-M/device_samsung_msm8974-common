@@ -108,21 +108,23 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
-    ril.subscription.types=NV,RUIM \
-    ro.use_data_netmgrd=true \
-    ro.baseband.arch=msm \
-    ro.data.large_tcp_window_size=true \
-    ro.ril.telephony.mqanelements=5 \
-    ro.ril.hsupa.category=6 \
-    ro.ril.def.agps.mode=1 \
-    ro.telephony.default_network=9 \
-    ro.telephony.call_ring.multiple=0 \
+    DEVICE_PROVISIONED=1 \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.data.netmgrd.qos.enable=true \
     persist.data.qmi.adb_logmask=0 \
+    persist.qcril.disable_retry=true \
     persist.telephony.oosisdc=false \
-    persist.qcril.disable_retry=true
+    ril.subscription.types=NV,RUIM \
+    ro.baseband.arch=msm \
+    ro.data.large_tcp_window_size=true \
+    ro.ril.def.agps.mode=1 \
+    ro.ril.hsupa.category=6 \
+    ro.ril.telephony.mqanelements=5 \
+    ro.telephony.default_network=9 \
+    ro.telephony.call_ring.multiple=0 \
+    ro.use_data_netmgrd=true \
+    telephony.lteOnGsmDevice=1 \
+    vendor.rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 
 # Recovery
 PRODUCT_PROPERTY_OVERRIDES += \
