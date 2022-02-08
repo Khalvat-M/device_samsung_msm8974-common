@@ -28,9 +28,6 @@
 import /vendor/etc/init/hw/init.qcom.usb.rc
 
 on early-init
-    mount debugfs debugfs /sys/kernel/debug
-    chmod 0755 /sys/kernel/debug
-
     # Increase max readahead size to 512 KB
     restorecon --recursive /sys/block/mmcblk0/queue
     restorecon --recursive /sys/block/mmcblk1/queue
