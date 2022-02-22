@@ -77,7 +77,7 @@ PRODUCT_PACKAGES += \
     libshim_binder \
     libshim_camera \
     libxml2 \
-    Snap
+    Camera2
 
 # Display
 PRODUCT_PACKAGES += \
