@@ -1,0 +1,34 @@
+//
+//
+// Copyright (C) 2022 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "camera.msm8974",
+    include_dirs: [
+        "frameworks/native/include",
+        "system/media/camera/include",
+    ],
+    srcs: ["CameraWrapper.cpp"],
+    static_libs: [
+        "libbase",
+        "libarect",
+    ],
+    shared_libs: [
+        "android.hardware.graphics.bufferqueue@1.0",
+        "android.hidl.token@1.0-utils",
+        "libdl",
+        "libcamera_client",
+        "libcutils",
+        "libhardware",
+        "libgui",
+        "liblog",
+        "libnativewindow",
+        "libsensor",
+        "libutils",
+    ],
+    header_libs: ["libnativebase_headers"],
+    relative_install_path: "hw",
+    proprietary: true,
+}
