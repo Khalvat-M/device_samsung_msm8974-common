@@ -1,0 +1,20 @@
+//
+//
+// Copyright (C) 2022 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libsecnativefeature",
+    include_dirs: ["external/expat/lib"],
+    srcs: [
+        "SecNativeFeatureCIf.cpp",
+        "SecNativeFeatureCppIf.cpp",
+    ],
+    shared_libs: ["libexpat"],
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ], 
+    proprietary: true,
+}
