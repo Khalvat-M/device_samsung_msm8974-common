@@ -1,0 +1,22 @@
+//
+//
+// Copyright (C) 2022 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "fingerprint.msm8974",
+    include_dirs: ["external/sqlite/dist"],
+    srcs: [
+    "fingerprint.c",
+    "fingerprint_tz.c",
+    "QSEEComAPI.c",
+    "hash.c",  
+    ],
+    shared_libs: [
+        "liblog",
+        "libsqlite",
+    ],
+    relative_install_path: "hw",
+    proprietary: true,
+}
