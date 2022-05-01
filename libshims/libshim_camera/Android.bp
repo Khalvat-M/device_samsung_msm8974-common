@@ -1,11 +1,11 @@
+//
+// Copyright (C) 2022 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
 cc_library_shared {
-
     srcs: ["camera_shim.c"],
-
-    proprietary: true,
-
     name: "libshim_camera",
-
     compile_multilib: "32",
-
+    vendor: true,
 }

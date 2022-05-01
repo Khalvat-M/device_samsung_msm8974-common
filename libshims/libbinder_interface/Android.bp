@@ -1,16 +1,15 @@
+//
+// Copyright (C) 2022 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
 cc_library_shared {
-
     srcs: ["libbinder_interface.cpp"],
-
     shared_libs: [
         "libbinder",
         "libutils",
     ],
-
-    proprietary: true,
-
     name: "libshim_binder",
-
     compile_multilib: "32",
-
+    vendor: true,
 }

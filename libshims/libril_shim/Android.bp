@@ -1,15 +1,14 @@
+//
+// Copyright (C) 2022 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
 cc_library_shared {
-
     srcs: ["libril_shim.cpp"],
-
     shared_libs: [
         "libaudioclient",
     ],
-
-    proprietary: true,
-
     name: "libril_shim",
-
     compile_multilib: "32",
-
+    vendor: true,
 }

@@ -16,5 +16,5 @@ cc_library_shared {
         "-Wall",
         "-Werror",
     ], 
-    proprietary: true,
+    vendor: true,
 }

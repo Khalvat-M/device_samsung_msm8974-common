@@ -30,5 +30,5 @@ cc_library_shared {
     ],
     header_libs: ["libnativebase_headers"],
     relative_install_path: "hw",
-    proprietary: true,
+    vendor: true,
 }

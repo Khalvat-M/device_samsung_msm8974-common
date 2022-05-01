@@ -1,3 +1,8 @@
+//
+// Copyright (C) 2022 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
 cc_library_static {
     name: "multihal-samsung8974",
     vendor: true,
@@ -24,7 +29,7 @@ cc_library_static {
 cc_library_shared {
     name: "android.hardware.sensors@1.0-impl.samsung8974",
     defaults: ["hidl_defaults"],
-    proprietary: true,
+    vendor: true,
     relative_install_path: "hw",
     srcs: ["Sensors.cpp"],
     shared_libs: [
