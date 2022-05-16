@@ -1,4 +1,4 @@
 # Fastcharge
 type sec_fastcharge_prop, property_type;
-
 type vendor_timekeep_prop, property_type;
+type qemu_hw_mainkeys_prop, property_type;
