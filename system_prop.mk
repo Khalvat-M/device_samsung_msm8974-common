@@ -90,10 +90,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    bluetooth.enable_timeout_ms=12000 \
-    ro.bt.bdaddr_path=/efs/bluetooth/bt_addr \
-    persist.bt.enableAptXHD=true \
-    persist.service.btui.use_aptx=1
+    ro.bt.bdaddr_path=/efs/bluetooth/bt_addr
     
 # BPF
 PRODUCT_PROPERTY_OVERRIDES += \
