@@ -275,6 +275,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SHIPPING_API_LEVEL := 18
 
 # Speed profile services and wifi-service to reduce RAM and storage.
+PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI  # For AOSP
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
 # The target has no boot jars to check
