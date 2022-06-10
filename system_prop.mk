@@ -131,6 +131,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.renderengine.backend=threaded \
     debug.sf.latch_unsignaled=1 \
     debug.sf.recomputecrop=0 \
+    debug.sf.disable_client_composition_cache=1 \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0 \
     vendor.display.disable_rotator_downscale=1 \
