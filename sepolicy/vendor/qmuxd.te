@@ -1,0 +1,2 @@
+get_prop(qmuxd, radio_prop)
+get_prop(qmuxd, default_prop)

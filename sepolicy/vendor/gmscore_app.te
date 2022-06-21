@@ -1,0 +1,5 @@
+get_prop(gmscore_app, oem_unlock_prop)
+get_prop(gmscore_app, ab_update_gki_prop)
+get_prop(gmscore_app, aac_drc_prop)
+
+allow gmscore_app zygote:unix_stream_socket { getopt };

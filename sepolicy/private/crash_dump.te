@@ -1,0 +1,3 @@
+get_prop(crash_dump, vendor_persist_camera_prop)
+
+allow crash_dump privapp_data_file:file { open r_file_perms };

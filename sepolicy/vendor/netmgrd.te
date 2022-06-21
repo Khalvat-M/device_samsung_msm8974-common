@@ -1,0 +1,2 @@
+get_prop(netmgrd, radio_prop)
+get_prop(netmgrd, default_prop)

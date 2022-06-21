@@ -1,0 +1,1 @@
+allow storaged sysfs:file { open getattr r_file_perms };

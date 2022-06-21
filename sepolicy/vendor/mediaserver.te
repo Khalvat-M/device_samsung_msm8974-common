@@ -1,4 +1,8 @@
+get_prop(mediaserver, vendor_default_prop)
+
+allow mediaserver app_data_file:file open;
 allow mediaserver sysfs_camera:dir search;
 allow mediaserver sysfs_camera:file r_file_perms;
 allow mediaserver vendor_file:file execmod;
 allow mediaserver exported_camera_prop:file r_file_perms;
+allow mediaserver package_native_service:service_manager find;

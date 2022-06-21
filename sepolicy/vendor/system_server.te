@@ -1,3 +1,9 @@
+binder_call(system_server, init)
+get_prop(system_server, vendor_default_prop)
+get_prop(system_server, vendor_security_patch_level_prop)
+get_prop(system_server, vendor_persist_camera_prop)
+get_prop(system_server, build_bootimage_prop)
+
 allow system_server {
     efs_file
     mpctl_data_file
@@ -13,8 +19,14 @@ allow system_server proc_last_kmsg:file r_file_perms;
 allow system_server sensor_efs_file:file rw_file_perms;
 allow system_server vendor_file:file execmod;
 allow system_server sysfs_sec_ir:file w_file_perms;
+allow system_server system_file:file {  ioctl  };
 allow system_server app_zygote:process {  getpgid  };
 
 get_prop(system_server, exported_camera_prop);
 get_prop(system_server, userspace_reboot_config_prop);
 get_prop(system_server, userspace_reboot_exported_prop);
+
+allow system_server vendor_init:fd { use };
+allow system_server vendor_init:fifo_file w_file_perms;
+allow system_server sdcardfs:file r_file_perms;
+allow system_server unlabeled:file { unlink };

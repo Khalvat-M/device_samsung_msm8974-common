@@ -1,0 +1,14 @@
+binder_call(init, servicemanager)
+
+allow init init:capability2 { block_suspend };
+allow init efs_file:dir mounton;
+allow init proc_last_kmsg:file { r_file_perms setattr };
+allow init sysfs_fingerprint:file setattr;
+allow init sysfs_sec_led:file { open rw_file_perms };
+allow init sysfs_graphics:file { open rw_file_perms };
+allow init sysfs:file w_file_perms;
+allow init proc:file rw_file_perms;
+allow init system_file:dir { relabelfrom };
+allow init system_file:file { relabelfrom };
+allow init vendor_file:file { execute_no_trans };
+allow init hal_light_service:service_manager { add };

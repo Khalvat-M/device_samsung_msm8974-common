@@ -1,1 +1,2 @@
+get_prop(ueventd, proc)
 allow ueventd self:capability sys_nice;

@@ -1,3 +1,4 @@
+get_prop(mm-qcamerad, default_prop)
 type_transition mm-qcamerad system_data_root_file:sock_file camera_socket "cam_socket3";
 
 allow mm-qcamerad sysfs_camera:dir search;

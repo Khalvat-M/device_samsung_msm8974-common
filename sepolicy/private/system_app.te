@@ -1,2 +1,5 @@
 binder_call(system_app, storaged)
 binder_call(system_app, system_suspend)
+get_prop(system_app, qemu_hw_prop)
+
+allow system_app privapp_data_file:dir search;

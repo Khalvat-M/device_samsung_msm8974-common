@@ -1,5 +1,8 @@
 set_prop(rild, net_radio_prop)
 set_prop(rild, radio_prop)
+set_prop(rild, system_prop)
+get_prop(rild, default_prop)
+get_prop(rild, vendor_rild_libpath_prop)
 
 allow rild alarm_device:chr_file rw_file_perms;
 
@@ -10,3 +13,5 @@ allow rild radio_data_file:lnk_file read;
 allow rild proc_net:file w_file_perms;
 allow rild proc_qtaguid_stat:file r_file_perms;
 allow rild sysfs_sec_key:file rw_file_perms;
+allow rild radio_core_data_file:file { create_file_perms open rw_file_perms getattr ioctl lock unlink };
+allow rild radio_core_data_file:dir { search open remove_name add_name rw_dir_perms };
