@@ -119,21 +119,24 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hdcp2.rx=tz \
-    ro.qualcomm.cabl=1 \
-    ro.secwvk=144 \
-    ro.opengles.version=196608 \
-    debug.sf.hw=1 \
-    debug.mdpcomp.logs=0 \
-    persist.hwc.mdpcomp.enable=true \
+    debug.egl.hw=0 \
     debug.hwui.use_buffer_age=false \
-    debug.hwui.renderer=opengl \
+    debug.hwui.renderer=skiagl \
+    debug.mdpcomp.logs=0 \
     debug.renderengine.backend=threaded \
+    debug.sf.hw=0 \
     debug.sf.latch_unsignaled=1 \
     debug.sf.recomputecrop=0 \
     debug.sf.disable_client_composition_cache=1 \
+    persist.sys.sf.disable_blurs=true \
+    debug.sdm.support_writeback=0 \
     persist.debug.wfd.enable=1 \
+    persist.hwc.mdpcomp.enable=true \
     persist.sys.wfd.virtual=0 \
+    ro.hdcp2.rx=tz \
+    ro.opengles.version=196608 \
+    ro.qualcomm.cabl=1 \
+    ro.secwvk=144 \
     vendor.display.disable_rotator_downscale=1 \
     vendor.display.disable_scaler=0
 
