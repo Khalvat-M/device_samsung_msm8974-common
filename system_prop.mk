@@ -141,6 +141,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sdm.support_writeback=0 \
     persist.debug.wfd.enable=1 \
     persist.hwc.mdpcomp.enable=true \
+    persist.log.tag.OpenGLRenderer=S \
     persist.sys.wfd.virtual=0 \
     ro.hdcp2.rx=tz \
     ro.opengles.version=196608 \
