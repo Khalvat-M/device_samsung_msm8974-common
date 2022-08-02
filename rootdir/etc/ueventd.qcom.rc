@@ -124,8 +124,8 @@
 /dev/avtimer              0660   system     audio
 /dev/snd/pcmC0D2c         0660   media      media
 /dev/i2c-5                0660   media      media
-/dev/smd3                 0660   bluetooth  bluetooth
 /dev/smd2                 0660   bluetooth  bluetooth
+/dev/smd3                 0660   bluetooth  bluetooth
 /dev/ttyHSL1              0660   system     system
 /dev/ttyHSL0              0660   radio      system
 /dev/ttyGS0               0660   system     system
@@ -142,6 +142,20 @@
 
 # IR_LED
 /dev/ice4_dev             0660   system     system
+
+# LED class devices
+/sys/class/leds/led_b      delay_on     0640    system    system
+/sys/class/leds/led_b      delay_off    0640    system    system
+/sys/class/leds/led_b      brightness   0640    system    system
+/sys/class/leds/led_b      trigger      0640    system    system
+/sys/class/leds/led_g      delay_on     0640    system    system
+/sys/class/leds/led_g      delay_off    0640    system    system
+/sys/class/leds/led_g      brightness   0640    system    system
+/sys/class/leds/led_g      trigger      0640    system    system
+/sys/class/leds/led_r      delay_on     0640    system    system
+/sys/class/leds/led_r      delay_off    0640    system    system
+/sys/class/leds/led_r      brightness   0640    system    system
+/sys/class/leds/led_r      trigger      0640    system    system
 
 # NFC_NXP
 /dev/pn547                0660   nfc        nfc
@@ -194,10 +208,10 @@
 /sys/devices/f9924000.i2c/i2c-2/2-0020/input/input*   enabled      0660    system   system
 
 # sensorhub
-/dev/batch_io             0660   system     system
-/dev/ssp_sensorhub        0660   system     system
-/dev/iio:device*          0660	 system	    system
-/sys/devices/f9967000.spi/spi_master/spi32765/spi32765.0/iio:device*   buffer/enable    0660   system     system
-/sys/devices/f9967000.spi/spi_master/spi32765/spi32765.0/iio:device*   buffer/length    0660   system     system
-/sys/devices/f9924000.spi/spi_master/spi32765/spi32765.0/iio:device*   buffer/enable    0660   system     radio
-/sys/devices/f9924000.spi/spi_master/spi32765/spi32765.0/iio:device*   buffer/length    0660   system     radio
+/dev/batch_io             0664   system     system
+/dev/ssp_sensorhub        0664   system     system
+/dev/iio:device*          0664	 system	    system
+/sys/devices/f9967000.spi/spi_master/spi32765/spi32765.0/iio:device*   buffer/enable    0664   system     system
+/sys/devices/f9967000.spi/spi_master/spi32765/spi32765.0/iio:device*   buffer/length    0664   system     system
+/sys/devices/f9924000.spi/spi_master/spi32765/spi32765.0/iio:device*   buffer/enable    0664   system     system
+/sys/devices/f9924000.spi/spi_master/spi32765/spi32765.0/iio:device*   buffer/length    0664   system     system
