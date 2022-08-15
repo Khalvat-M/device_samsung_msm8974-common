@@ -90,6 +90,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.bluetooth.a2dp_offload.supported=false \
     ro.bt.bdaddr_path=/efs/bluetooth/bt_addr
     
 # Blur
