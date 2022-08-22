@@ -82,6 +82,10 @@ PRODUCT_PACKAGES += \
     libxml2 \
     Camera2
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images_vendor
+
 # Configstore
 PRODUCT_PACKAGES += \
     android.hardware.configstore@1.1-service
@@ -140,9 +144,8 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service \
-    android.hardware.health@2.1-impl.recovery
+    android.hardware.health-service.samsung \
+    android.hardware.health-service.samsung-recovery
 
 # IR Blaster
 PRODUCT_PACKAGES += \
