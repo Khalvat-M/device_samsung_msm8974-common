@@ -9,7 +9,7 @@
 #
 #<src>                                              <mnt_point>     <type>  <mnt_flags and options>                                                                   <fs_mgr_flags>
 /dev/block/platform/msm_sdcc.1/by-name/system       /system         ext4    ro,barrier=1                                                                              wait,recoveryonly
-/dev/block/platform/msm_sdcc.1/by-name/userdata     /data           ext4    rw,nosuid,nodev,noatime,noauto_da_alloc,barrier=1,data=ordered,discard                    wait,check,formattable,encryptable=footer,length=-16384
+/dev/block/platform/msm_sdcc.1/by-name/userdata     /data           ext4    rw,nosuid,nodev,noatime,noauto_da_alloc,barrier=1,data=ordered,discard                    wait,check,formattable,length=-16384
 /dev/block/platform/msm_sdcc.1/by-name/cache        /cache          ext4    rw,nosuid,nodev,noatime,noauto_da_alloc,barrier=1,data=ordered                            wait,check,formattable
 /dev/block/platform/msm_sdcc.1/by-name/apnhlos      /firmware       vfat    ro,uid=1000,gid=1026,dmask=227,fmask=337,context=u:object_r:firmware_file:s0              wait
 /dev/block/platform/msm_sdcc.1/by-name/modem        /firmware-modem vfat    ro,uid=1000,gid=1026,dmask=227,fmask=337,context=u:object_r:firmware_file:s0              wait
@@ -22,7 +22,7 @@
 /dev/block/platform/msm_sdcc.1/by-name/boot         /boot           emmc    defaults                                                                                  recoveryonly
 /dev/block/platform/msm_sdcc.1/by-name/recovery     /recovery       emmc    defaults                                                                                  recoveryonly
 
-/devices/msm_sdcc.3/mmc_host/mmc*                   auto            auto    defaults                                                                                  voldmanaged=sdcard1:auto,encryptable=userdata
+/devices/msm_sdcc.3/mmc_host/mmc*                   auto            auto    defaults                                                                                  voldmanaged=sdcard1:auto
 
 /dev/block/zram0                                    none            swap    defaults                                                                                  zramsize=419430400,max_comp_streams=4,swapprio=10,notrim
 
