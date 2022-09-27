@@ -79,11 +79,6 @@
         <fqname>@1.0::IMemtrack/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.radio.config</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IRadioConfig/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.renderscript</name>
         <transport arch="32">passthrough</transport>
         <fqname>@1.0::IDevice/default</fqname>
