@@ -75,6 +75,10 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Includes
 TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 
+# IPA
+USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um
+
 # Kernel
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
