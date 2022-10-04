@@ -228,10 +228,6 @@
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
 
-    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
-    in hardware. -->
-    <bool name="config_setColorTransformAccelerated">true</bool>
-      
     <!-- AlwaysOnDisplay  -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
      
