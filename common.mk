@@ -40,17 +40,13 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@7.0-impl:32 \
     android.hardware.audio.effect@7.0-impl:32 \
-    audio_policy.msm8974 \
     audio.primary.msm8974 \
     audio.r_submix.default \
     audio.usb.default \
-    libaacwrapper \
     libaudio-resampler \
-    libautohal \
     libqcomvisualizer \
     libqcompostprocbundle \
-    libqcomvoiceprocessing \
-    libvolumelistener
+    libqcomvoiceprocessing
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
@@ -175,9 +171,7 @@ PRODUCT_PACKAGES += \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
-    libOmxG711Enc \
     libOmxQcelp13Enc \
-    libOmxSwVencHevc \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
@@ -318,7 +312,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service.legacy \
     hostapd \
-    libnetcmdiface \
     libwpa_client \
     macloader \
     TetheringConfigOverlay \
