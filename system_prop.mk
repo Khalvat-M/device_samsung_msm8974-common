@@ -90,6 +90,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.bluetooth.a2dp_offload.disabled=true \
+    persist.bluetooth.bluetooth_audio_hal.disabled=false \
     ro.bluetooth.a2dp_offload.supported=false \
     ro.bt.bdaddr_path=/efs/bluetooth/bt_addr
     
