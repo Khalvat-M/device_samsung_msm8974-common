@@ -76,7 +76,7 @@ PRODUCT_PACKAGES += \
     libshim_binder \
     libshim_camera \
     libxml2 \
-    Camera2
+    Aperture
 
 # Charger
 PRODUCT_PACKAGES += \
