@@ -77,7 +77,6 @@ TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 
 # IPA
 USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
-PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG := true
@@ -140,6 +139,9 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private 
+
+# SOONG
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um hardware/samsung
 
 # TWRP Support - Optional
 # export WITH_TWRP=true
