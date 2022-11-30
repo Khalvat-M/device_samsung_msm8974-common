@@ -178,9 +178,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # IORap
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.iorapd.enable=true \
-    iorapd.perfetto.enable=true \
-    iorapd.readahead.enable=true
+    ro.iorapd.enable=false \
+    iorapd.perfetto.enable=false \
+    iorapd.readahead.enable=false
 
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
