@@ -118,6 +118,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 # Blur
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.sf.disable_blurs=1 \
+    ro.sf.blurs_are_expensive=1 \
     ro.surface_flinger.supports_background_blur=0
    
 # BPF
@@ -152,7 +154,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.latch_unsignaled=1 \
     debug.sf.recomputecrop=0 \
     debug.sf.disable_client_composition_cache=1 \
-    persist.sys.sf.disable_blurs=true \
     debug.sdm.support_writeback=0 \
     persist.debug.wfd.enable=1 \
     persist.hwc.mdpcomp.enable=true \
