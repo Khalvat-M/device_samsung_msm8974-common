@@ -265,4 +265,7 @@
     <!-- Default value for whether a SFPS device is required to be interactive for 
          fingerprint auth to unlock the device.  -->
     <bool name="config_requireScreenOnToAuthEnabled">true</bool>
+
+    <!-- Determines whether the shell features all run on another thread. -->
+    <bool name="config_enableShellMainThread">true</bool>
 </resources>
