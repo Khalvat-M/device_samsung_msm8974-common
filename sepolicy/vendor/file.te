@@ -22,6 +22,7 @@ type sysfs_wifi_writeable, fs_type, sysfs_type;
 type sysfs_fastcharge, sysfs_type, fs_type;
 type sysfs_battery, sysfs_type, fs_type;
 type sysfs_battery_writable, sysfs_type, fs_type;
+type sysfs_hal_health_service, sysfs_type, fs_type;
 
 type bt_fw_file, file_type;
 type nfc_fw_file, file_type;
@@ -36,4 +37,5 @@ type vendor_sensor_lib_file, vendor_file_type, file_type;
 type mediadrm_vendor_data_file,  file_type, data_file_type;
 type sysfs_fingerprint, fs_type, sysfs_type;
 type vfsspi_data_file, file_type, data_file_type;
+type netlink_kobject_uevent_socket, file_type;
 type hal_data_file, file_type, data_file_type;

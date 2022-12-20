@@ -1,0 +1,9 @@
+allow system_suspend {
+  sysfs
+  sysfs_batteryinfo
+}:dir r_file_perms;
+
+allow system_suspend {
+  sysfs
+  sysfs_batteryinfo
+}:file r_file_perms;

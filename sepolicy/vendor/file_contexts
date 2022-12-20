@@ -63,21 +63,13 @@
 /dev/cpuset(/.*)?    u:object_r:cgroup:s0
 /dev/stune(/.*)?     u:object_r:cgroup:s0
 
-/proc/sys/kernel/pid_max                                u:object_r:proc_pid_max:s0
-/proc/tty/drivers                                       u:object_r:proc_tty_drivers:s0
-/proc/net/arp                                           u:object_r:proc_net:s0
-/proc/net/unix                                          u:object_r:proc_net:s0
-/proc/net/tcp                                           u:object_r:proc_net_tcp_udp:s0
-/proc/version                                           u:object_r:proc_version:s0
-/sys/block/mmcblk0/device/type                          u:object_r:sysfs:s0
-/sys/class/android_usb                                  u:object_r:sysfs_android_usb:s0
-
 # executeables
 /system/vendor/bin/macloader                            u:object_r:macloader_exec:s0
 /system/vendor/bin/servicemanager                       u:object_r:servicemanager_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.audio\.service\.samsung8974             u:object_r:hal_audio_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software       u:object_r:hal_gatekeeper_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.samsung                u:object_r:hal_ir_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.health-service\.samsung                 u:object_r:hal_health_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@1\.0-service.samsung8974        u:object_r:hal_sensors_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.samsung-qcom    u:object_r:hal_lineage_livedisplay_sysfs_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.samsung               u:object_r:hal_lineage_touch_default_exec:s0

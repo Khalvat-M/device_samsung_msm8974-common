@@ -1,3 +1,5 @@
 get_prop(crash_dump, vendor_persist_camera_prop)
 
 allow crash_dump privapp_data_file:file { open r_file_perms };
+allow crash_dump bluetooth_data_file:file { read open getattr };
+allow crash_dump resourcecache_data_file:file { read open getattr };
