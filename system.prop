@@ -1,0 +1,108 @@
+# Art
+dalvik.vm.boot-dex2oat-threads=4
+dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3
+dalvik.vm.dex2oat64.enabled=false
+dalvik.vm.dex2oat-cpu-set=0,1,2,3
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.dex2oat-swap=false
+dalvik.vm.dex2oat-threads=4
+dalvik.vm.image-dex2oat-cpu-set=0,1,2,3
+dalvik.vm.image-dex2oat-threads=4
+ro.sys.fw.dex2oat_thread_count=4
+
+# BPF
+ro.kernel.ebpf.supported=false
+
+# Camera
+camera2.portability.force_api=1
+
+# Dalvikheap
+dalvik.vm.heapstartsize=16m
+dalvik.vm.heapgrowthlimit=192m
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=2m
+dalvik.vm.heapmaxfree=8m
+
+# fastbootd
+ro.fastbootd.available=true
+
+# GPS
+persist.gps.qc_nlp_in_use=0
+ro.gps.agps_provider=1
+ro.qc.sdk.izat.premium_enabled=0
+ro.qc.sdk.izat.service_mask=0x0
+
+# IORap
+ro.iorapd.enable=false
+iorapd.perfetto.enable=false
+iorapd.readahead.enable=false
+
+# Memory optimizations
+ro.vendor.qti.am.reschedule_service=true
+ro.vendor.qti.sys.fw.bservice_enable=true
+
+# Network manager
+ro.telephony.iwlan_operation_mode=legacy
+
+# NFC
+ro.nfc.port=I2C
+
+# NITZ
+persist.rild.nitz_plmn=""
+persist.rild.nitz_long_ons_0=""
+persist.rild.nitz_long_ons_1=""
+persist.rild.nitz_long_ons_2=""
+persist.rild.nitz_long_ons_3=""
+persist.rild.nitz_short_ons_0=""
+persist.rild.nitz_short_ons_1=""
+persist.rild.nitz_short_ons_2=""
+persist.rild.nitz_short_ons_3=""
+
+# Perf
+ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so
+
+# Radio
+DEVICE_PROVISIONED=1
+persist.radio.apm_sim_not_pwdn=1
+persist.data.netmgrd.qos.enable=true
+persist.data.qmi.adb_logmask=0
+persist.qcril.disable_retry=true
+persist.telephony.oosisdc=false
+persist.vendor.radio.enableadvancedscan=false
+persist.vendor.radio.mt_sms_ack=30
+persist.vendor.radio.rat_on=combine
+ril.subscription.types=NV,RUIM
+ro.baseband.arch=msm
+ro.data.large_tcp_window_size=true
+ro.ril.def.agps.mode=1
+ro.ril.hsupa.category=6
+ro.ril.telephony.mqanelements=5
+ro.telephony.default_network=9
+ro.telephony.call_ring.multiple=0
+ro.vendor.use_data_netmgrd=true
+telephony.lteOnGsmDevice=1
+vendor.rild.libpath=/vendor/lib/libril-qc-qmi-1.so
+
+# Recovery
+persist.vendor.recovery_update=false
+ro.recovery.skip_ev_rel_input=true
+
+# Sensors
+debug.sensors=1
+
+# System
+ro.vndk.version=current
+
+# Tethering
+net.tethering.noprovisioning=true
+
+# Time
+persist.timed.enable=true
+
+# WiFi
+wifi.interface=wlan0
+
+# Zygote
+persist.device_config.runtime_native.usap_pool_enabled=true
+zygote.critical_window.minute=10
