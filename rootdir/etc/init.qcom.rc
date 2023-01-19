@@ -684,8 +684,9 @@ on early-boot
     chmod 0660 /sys/devices/f995e000.uart/clock
 
     # permissions for bluetooth.
+    chown bluetooth bluetooth ro.bt.bdaddr_path
     chown radio bluetooth /efs/bluetooth/bt_addr
-    chmod 0640 /efs/bluetooth/bt_addr
+    chmod 0755 /efs/bluetooth/bt_addr
     restorecon_recursive /efs/bluetooth
     chmod 0660 /sys/class/rfkill/rfkill0/state
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
