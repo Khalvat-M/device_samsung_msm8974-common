@@ -75,9 +75,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Includes
 TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 
-# IPA
-USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
-
 # Kernel
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
@@ -146,7 +143,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private 
 
 # SOONG
-PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um hardware/samsung
+PRODUCT_SOONG_NAMESPACES += hardware/samsung
 
 # TWRP Support - Optional
 # export WITH_TWRP=true
