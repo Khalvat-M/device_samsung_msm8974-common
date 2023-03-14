@@ -1,7 +1,3 @@
-# aptX
-vendor/lib/libaptX_encoder.so
-vendor/lib/libaptXHD_encoder.so
-
 # CPU
 bin/mpdecision:vendor/bin/mpdecision
 vendor/bin/thermal-engine
