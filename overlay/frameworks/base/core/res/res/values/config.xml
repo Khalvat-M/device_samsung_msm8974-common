@@ -261,4 +261,8 @@
 
     <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
     <integer name="config_screenRecorderMaxFramerate">30</integer>
+    
+    <!-- Default value for whether a SFPS device is required to be interactive for 
+         fingerprint auth to unlock the device.  -->
+    <bool name="config_requireScreenOnToAuthEnabled">true</bool>
 </resources>
